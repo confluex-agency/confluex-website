@@ -7,7 +7,7 @@
   <meta name="description" content="Confluex: soluciones digitales de diseño web, automatización de procesos y chatbots con IA. Dos culturas, un código. Desde Dublín para Latinoamérica y el mundo.">
   <meta name="keywords" content="diseño web, automatización, chatbots, IA, desarrollo web, Dublin, Confluex">
   <meta name="author" content="Confluex">
-  <meta name="theme-color" content="#0A0A0A">
+  <meta name="theme-color" content="#0A0A0A" id="metaThemeColor">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -44,10 +44,49 @@
       --night: #1A1A2E;
       --graphite: #6B6B6B;
       --surface: #111114;
+      --nav-bg: rgba(10,10,10,0.92);
+      --nav-border: rgba(200,255,0,0.06);
+      --card-border: rgba(255,255,255,0.04);
+      --card-hover-border: rgba(200,255,0,0.1);
+      --glow-lime: rgba(200,255,0,0.04);
+      --glow-night: rgba(26,26,46,0.4);
+      --grid-line: rgba(200,255,0,0.3);
+      --divider-color: rgba(200,255,0,0.12);
+      --step-hover: rgba(200,255,0,0.03);
+      --step-num: rgba(200,255,0,0.06);
+      --cta-glow: rgba(200,255,0,0.05);
+      --footer-border: rgba(255,255,255,0.04);
+      --overlay-bg: rgba(0,0,0,0.6);
+      --shadow-card: rgba(0,0,0,0.5);
+      --cta-btn-shadow: rgba(200,255,0,0.2);
+    }
+    [data-theme="light"] {
+      --black: #F5F3F0;
+      --bone: #1A1A1A;
+      --lime: #7AB800;
+      --lime-dark: #5E9200;
+      --night: #E8E4DF;
+      --graphite: #6B6B6B;
+      --surface: #EDEAE6;
+      --nav-bg: rgba(245,243,240,0.92);
+      --nav-border: rgba(122,184,0,0.1);
+      --card-border: rgba(0,0,0,0.06);
+      --card-hover-border: rgba(122,184,0,0.2);
+      --glow-lime: rgba(122,184,0,0.06);
+      --glow-night: rgba(237,234,230,0.4);
+      --grid-line: rgba(122,184,0,0.15);
+      --divider-color: rgba(122,184,0,0.15);
+      --step-hover: rgba(122,184,0,0.05);
+      --step-num: rgba(122,184,0,0.1);
+      --cta-glow: rgba(122,184,0,0.08);
+      --footer-border: rgba(0,0,0,0.06);
+      --overlay-bg: rgba(0,0,0,0.3);
+      --shadow-card: rgba(0,0,0,0.1);
+      --cta-btn-shadow: rgba(122,184,0,0.3);
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--bone); overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--bone); overflow-x: hidden; transition: background 0.4s, color 0.4s; }
 
     /* === NAV === */
     nav {
@@ -57,8 +96,8 @@
       transition: background 0.4s, padding 0.4s;
     }
     nav.scrolled {
-      background: rgba(10,10,10,0.92); backdrop-filter: blur(20px);
-      padding: 16px 48px; border-bottom: 1px solid rgba(200,255,0,0.06);
+      background: var(--nav-bg); backdrop-filter: blur(20px);
+      padding: 16px 48px; border-bottom: 1px solid var(--nav-border);
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { height: 28px; }
@@ -72,6 +111,15 @@
       background: none; border: none; cursor: pointer; padding: 4px;
     }
     .nav-toggle span { width: 20px; height: 2px; background: var(--bone); transition: 0.3s; }
+    .theme-toggle {
+      background: none; border: 1px solid var(--card-border); border-radius: 50%;
+      width: 34px; height: 34px; cursor: pointer; display: flex; align-items: center;
+      justify-content: center; color: var(--bone); font-size: 1rem; transition: border-color 0.3s, color 0.3s;
+    }
+    .theme-toggle:hover { border-color: var(--lime); color: var(--lime); }
+    .theme-toggle .icon-moon,
+    [data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    [data-theme="light"] .theme-toggle .icon-moon { display: inline; }
     @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
 
     /* === HERO === */
@@ -82,14 +130,14 @@
     .hero__bg {
       position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse at 30% 20%, rgba(200,255,0,0.04) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, rgba(26,26,46,0.4) 0%, transparent 50%);
+        radial-gradient(ellipse at 30% 20%, var(--glow-lime) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, var(--glow-night) 0%, transparent 50%);
     }
     .hero__grid {
       position: absolute; inset: 0; z-index: 0; opacity: 0.03;
       background-image:
-        linear-gradient(rgba(200,255,0,0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,255,0,0.3) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
       background-size: 80px 80px;
     }
     .hero__content { position: relative; z-index: 2; max-width: 900px; padding: 0 32px; }
@@ -128,7 +176,7 @@
     @keyframes scrollLine { 0% { opacity: 0; transform: scaleY(0); } 50% { opacity: 1; transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(0); } }
 
     /* === DIVIDER === */
-    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,255,0,0.12), transparent); }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--divider-color), transparent); }
 
     /* === SERVICES === */
     .services { padding: 140px 0; }
@@ -147,10 +195,10 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
     }
     .s-card {
-      background: var(--surface); border: 1px solid rgba(255,255,255,0.04);
+      background: var(--surface); border: 1px solid var(--card-border);
       border-radius: 24px; padding: 48px 36px; transition: all 0.5s; position: relative; overflow: hidden;
     }
-    .s-card:hover { background: var(--night); border-color: rgba(200,255,0,0.1); transform: translateY(-4px); }
+    .s-card:hover { background: var(--night); border-color: var(--card-hover-border); transform: translateY(-4px); }
     .s-card__num {
       font-family: 'JetBrains Mono'; font-size: 0.7rem; color: var(--lime);
       letter-spacing: 2px; margin-bottom: 32px; opacity: 0.6;
@@ -177,10 +225,10 @@
       padding: 36px 28px; background: var(--black); border-radius: 16px; position: relative;
       transition: all 0.4s;
     }
-    .step:hover { background: rgba(200,255,0,0.03); }
+    .step:hover { background: var(--step-hover); }
     .step__num {
       font-family: 'Outfit'; font-size: 3rem; font-weight: 800;
-      color: rgba(200,255,0,0.06); line-height: 1; margin-bottom: 20px;
+      color: var(--step-num); line-height: 1; margin-bottom: 20px;
     }
     .step h4 { font-family: 'Outfit'; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
     .step p { color: var(--graphite); font-size: 0.82rem; line-height: 1.6; }
@@ -211,7 +259,7 @@
     .founders__visual { display: flex; gap: 20px; justify-content: center; }
     .founder-card {
       border-radius: 20px; overflow: hidden; width: 220px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: transform 0.4s;
+      box-shadow: 0 20px 60px var(--shadow-card); transition: transform 0.4s;
     }
     .founder-card:nth-child(2) { margin-top: 40px; }
     .founder-card:hover { transform: translateY(-8px); }
@@ -222,7 +270,7 @@
     .cta::before {
       content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(200,255,0,0.05), transparent 70%);
+      background: radial-gradient(circle, var(--cta-glow), transparent 70%);
       pointer-events: none;
     }
     .cta__content { position: relative; z-index: 2; }
@@ -238,7 +286,7 @@
       border-radius: 14px; text-decoration: none; font-family: 'Outfit';
       font-weight: 700; font-size: 1rem; transition: all 0.3s;
     }
-    .cta__btn:hover { background: var(--lime-dark); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(200,255,0,0.2); }
+    .cta__btn:hover { background: var(--lime-dark); transform: translateY(-3px); box-shadow: 0 12px 40px var(--cta-btn-shadow); }
     .cta__email {
       display: block; margin-top: 20px;
       font-family: 'JetBrains Mono'; font-size: 0.85rem; color: var(--graphite);
@@ -247,7 +295,7 @@
     .cta__email:hover { color: var(--lime); }
 
     /* === FOOTER === */
-    footer { border-top: 1px solid rgba(255,255,255,0.04); padding: 32px 48px; }
+    footer { border-top: 1px solid var(--footer-border); padding: 32px 48px; }
     .footer__inner {
       max-width: 1200px; margin: 0 auto;
       display: flex; justify-content: space-between; align-items: center;
@@ -267,6 +315,10 @@
     .fade-delay-2 { transition-delay: 0.2s; }
     .fade-delay-3 { transition-delay: 0.3s; }
 
+    /* === MOBILE MENU (hidden on desktop) === */
+    .mobile-menu { display: none; }
+    .overlay { display: none; }
+
     /* === MOBILE === */
     @media (max-width: 900px) {
       .services__cards { grid-template-columns: 1fr; }
@@ -282,7 +334,7 @@
         position: fixed; top: 0; right: -100%; width: 75%; height: 100vh;
         background: var(--surface); z-index: 200; padding: 80px 32px;
         display: flex; flex-direction: column; gap: 24px;
-        transition: right 0.35s ease; border-left: 1px solid rgba(200,255,0,0.06);
+        transition: right 0.35s ease; border-left: 1px solid var(--nav-border);
       }
       .mobile-menu.open { right: 0; }
       .mobile-menu a {
@@ -290,7 +342,7 @@
         font-size: 1.3rem; font-weight: 600; transition: color 0.3s;
       }
       .mobile-menu a:hover { color: var(--lime); }
-      .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 150; display: none; }
+      .overlay { position: fixed; inset: 0; background: var(--overlay-bg); z-index: 150; display: none; }
       .overlay.open { display: block; }
       .hero h1 { letter-spacing: -1.5px; }
       .hero__grid { display: none; }
@@ -329,6 +381,10 @@
       <a href="#process">Proceso</a>
       <a href="#founders">Equipo</a>
       <a href="#contact">Contacto</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="icon-sun">&#9788;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
       <div class="nav-dot"></div>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -473,6 +529,35 @@
   </footer>
 
   <script>
+    // Theme toggle
+    (function() {
+      const html = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') html.setAttribute('data-theme', 'light');
+
+      function updateMeta() {
+        const isLight = html.getAttribute('data-theme') === 'light';
+        document.getElementById('metaThemeColor').content = isLight ? '#F5F3F0' : '#0A0A0A';
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        updateMeta();
+        document.getElementById('themeToggle').addEventListener('click', () => {
+          const isLight = html.getAttribute('data-theme') === 'light';
+          if (isLight) {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            html.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+          }
+          updateMeta();
+        });
+      });
+    })();
+
     // Nav scroll effect
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
