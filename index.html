@@ -53,7 +53,7 @@
       --grid-line: rgba(200,255,0,0.3);
       --divider-color: rgba(200,255,0,0.12);
       --step-hover: rgba(200,255,0,0.03);
-      --step-num: rgba(200,255,0,0.06);
+      --step-num: rgba(200,255,0,0.15);
       --cta-glow: rgba(200,255,0,0.05);
       --footer-border: rgba(255,255,255,0.04);
       --overlay-bg: rgba(0,0,0,0.6);
@@ -77,7 +77,7 @@
       --grid-line: rgba(122,184,0,0.15);
       --divider-color: rgba(122,184,0,0.15);
       --step-hover: rgba(122,184,0,0.05);
-      --step-num: rgba(122,184,0,0.1);
+      --step-num: rgba(122,184,0,0.25);
       --cta-glow: rgba(122,184,0,0.08);
       --footer-border: rgba(0,0,0,0.06);
       --overlay-bg: rgba(0,0,0,0.3);
@@ -206,6 +206,12 @@
     .s-card h3 { font-family: 'Outfit'; font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; }
     .s-card p { color: var(--graphite); font-size: 0.9rem; line-height: 1.7; margin-bottom: 32px; }
     .s-card__line { height: 2px; width: 40px; background: var(--lime); opacity: 0.4; transition: width 0.4s, opacity 0.4s; }
+    .s-card__portfolio-link {
+      display: inline-block; font-family: 'JetBrains Mono'; font-size: 0.72rem;
+      color: var(--lime); text-decoration: none; opacity: 0.5; margin-bottom: 24px;
+      letter-spacing: 1px; transition: opacity 0.3s;
+    }
+    .s-card__portfolio-link:hover { opacity: 1; }
     .s-card:hover .s-card__line { width: 80px; opacity: 1; }
 
     /* === PROCESS === */
@@ -232,6 +238,59 @@
     }
     .step h4 { font-family: 'Outfit'; font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
     .step p { color: var(--graphite); font-size: 0.82rem; line-height: 1.6; }
+
+    /* === PORTFOLIO === */
+    .portfolio { padding: 140px 0; }
+    .portfolio__inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .portfolio__header { margin-bottom: 64px; }
+    .portfolio__label {
+      font-family: 'JetBrains Mono'; font-size: 0.7rem; color: var(--lime);
+      letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; opacity: 0.6;
+    }
+    .portfolio__header h2 {
+      font-family: 'Outfit'; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .portfolio__header h2 strong { color: var(--lime); }
+    .portfolio__grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .p-card {
+      background: var(--surface); border: 1px solid var(--card-border);
+      border-radius: 24px; overflow: hidden; transition: all 0.5s; position: relative;
+    }
+    .p-card:hover { border-color: var(--card-hover-border); transform: translateY(-4px); }
+    .p-card__thumb {
+      aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem; position: relative;
+    }
+    .p-card__thumb--cafe { background: linear-gradient(135deg, #3E2723, #6D4C41); }
+    .p-card__thumb--restaurant { background: linear-gradient(135deg, #BF360C, #E65100); }
+    .p-card__thumb--salon { background: linear-gradient(135deg, #4A148C, #7B1FA2); }
+    .p-card__thumb--dental { background: linear-gradient(135deg, #00695C, #00897B); }
+    .p-card__thumb--gym { background: linear-gradient(135deg, #1565C0, #1976D2); }
+    .p-card__thumb--vet { background: linear-gradient(135deg, #2E7D32, #43A047); }
+    .p-card__body { padding: 24px; }
+    .p-card__tag {
+      display: inline-block; font-family: 'JetBrains Mono'; font-size: 0.65rem;
+      background: rgba(200,255,0,0.08); color: var(--lime); padding: 4px 10px;
+      border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    [data-theme="light"] .p-card__tag { background: rgba(122,184,0,0.1); }
+    .p-card__name {
+      font-family: 'Outfit'; font-size: 1.15rem; font-weight: 700; margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+    .p-card__link {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+      font-family: 'Outfit'; font-size: 0.8rem; font-weight: 600;
+      color: var(--lime); text-decoration: none; letter-spacing: 1px; text-transform: uppercase;
+      transition: gap 0.3s;
+    }
+    .p-card__link:hover { gap: 12px; }
+    .p-card__link--soon {
+      color: var(--graphite); pointer-events: none; cursor: default;
+    }
 
     /* === FOUNDERS === */
     .founders { padding: 140px 0; }
@@ -323,6 +382,7 @@
     @media (max-width: 900px) {
       .services__cards { grid-template-columns: 1fr; }
       .process__steps { grid-template-columns: 1fr 1fr; }
+      .portfolio__grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -351,6 +411,8 @@
       .services__cards { grid-template-columns: 1fr; padding: 0 24px; }
       .process__inner { padding: 0 24px; }
       .process__steps { grid-template-columns: 1fr; }
+      .portfolio__grid { grid-template-columns: 1fr; }
+      .portfolio__inner { padding: 0 24px; }
       .founders__inner { grid-template-columns: 1fr; padding: 0 24px; gap: 48px; }
       .founders__visual { order: -1; }
       .founder-card { width: 160px; }
@@ -366,6 +428,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#services" class="mobile-link">Servicios</a>
     <a href="#process" class="mobile-link">Proceso</a>
+    <a href="#portfolio" class="mobile-link">Portfolio</a>
     <a href="#founders" class="mobile-link">Equipo</a>
     <a href="#contact" class="mobile-link">Contacto</a>
   </div>
@@ -379,6 +442,7 @@
     <div class="nav-right">
       <a href="#services">Servicios</a>
       <a href="#process">Proceso</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#founders">Equipo</a>
       <a href="#contact">Contacto</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
@@ -423,6 +487,7 @@
         <div class="s-card__num">001</div>
         <h3>Diseño & Desarrollo Web</h3>
         <p>Sitios modernos, responsive y optimizados para convertir. Desde landing pages hasta plataformas completas.</p>
+        <a href="#portfolio" class="s-card__portfolio-link">Ver proyectos &rarr;</a>
         <div class="s-card__line"></div>
       </div>
       <div class="s-card fade fade-delay-2">
@@ -469,6 +534,68 @@
           <div class="step__num">04</div>
           <h4>Entregamos</h4>
           <p>Lanzamos, optimizamos y te acompañamos post-launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio__inner">
+      <div class="portfolio__header fade">
+        <div class="portfolio__label">// nuestro trabajo</div>
+        <h2>Proyectos que <strong>hablan</strong></h2>
+      </div>
+      <div class="portfolio__grid">
+        <div class="p-card fade fade-delay-1">
+          <div class="p-card__thumb p-card__thumb--cafe">&#9749;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Cafetería</div>
+            <div class="p-card__name">Origen & Altitud Café</div>
+            <a href="https://geisonhg.github.io/gersoTech/demos/demo-cafe/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+          </div>
+        </div>
+        <div class="p-card fade fade-delay-2">
+          <div class="p-card__thumb p-card__thumb--restaurant">&#127869;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Restaurante</div>
+            <div class="p-card__name">Sabor de mi Tierra</div>
+            <a href="https://geisonhg.github.io/gersoTech/demos/demo-fastfood/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+          </div>
+        </div>
+        <div class="p-card fade fade-delay-3">
+          <div class="p-card__thumb p-card__thumb--salon">&#9986;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Peluquería</div>
+            <div class="p-card__name">Lumière Atelier</div>
+            <a href="https://geisonhg.github.io/gersoTech/demos/demo-peluqueria/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+          </div>
+        </div>
+        <div class="p-card fade fade-delay-1">
+          <div class="p-card__thumb p-card__thumb--dental">&#129463;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Clínica Dental</div>
+            <div class="p-card__name">Clínica Dental</div>
+            <span class="p-card__link p-card__link--soon">Próximamente</span>
+          </div>
+        </div>
+        <div class="p-card fade fade-delay-2">
+          <div class="p-card__thumb p-card__thumb--gym">&#127947;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Fitness</div>
+            <div class="p-card__name">Gimnasio / Fitness</div>
+            <span class="p-card__link p-card__link--soon">Próximamente</span>
+          </div>
+        </div>
+        <div class="p-card fade fade-delay-3">
+          <div class="p-card__thumb p-card__thumb--vet">&#128054;</div>
+          <div class="p-card__body">
+            <div class="p-card__tag">Veterinaria</div>
+            <div class="p-card__name">Veterinaria</div>
+            <span class="p-card__link p-card__link--soon">Próximamente</span>
+          </div>
         </div>
       </div>
     </div>
