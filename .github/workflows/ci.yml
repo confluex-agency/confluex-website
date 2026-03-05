@@ -1,0 +1,179 @@
+name: Confluex CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  # ── Job 1: HTML Validation ──
+  html-validation:
+    name: HTML Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate HTML files
+        run: npx html-validate "**/*.html"
+
+  # ── Job 2: CSS Lint ──
+  css-lint:
+    name: CSS Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Create Stylelint config
+        run: |
+          cat > .stylelintrc.json << 'CONF'
+          {
+            "extends": "stylelint-config-standard",
+            "rules": {
+              "no-duplicate-selectors": true,
+              "declaration-block-no-duplicate-properties": true,
+              "color-no-invalid-hex": true,
+              "font-family-no-duplicate-names": true,
+              "no-descending-specificity": null,
+              "no-empty-source": null,
+              "selector-class-pattern": null,
+              "custom-property-pattern": null,
+              "keyframes-name-pattern": null,
+              "alpha-value-notation": null,
+              "color-function-notation": null,
+              "shorthand-property-no-redundant-values": null,
+              "property-no-vendor-prefix": null,
+              "declaration-block-no-redundant-longhand-properties": null,
+              "import-notation": null
+            }
+          }
+          CONF
+
+      - name: Lint CSS files
+        run: npx stylelint "demos/**/assets/css/*.css"
+
+  # ── Job 3: Broken Links Check ──
+  broken-links:
+    name: Broken Links Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links with Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 100..399
+            --exclude-mail
+            --exclude "^tel:"
+            --exclude "wa.me"
+            --exclude "api.whatsapp.com"
+            "**/*.html"
+          fail: true
+
+  # ── Job 4: Lighthouse CI ──
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Create Lighthouse config
+        run: |
+          cat > lighthouserc.json << 'CONF'
+          {
+            "ci": {
+              "collect": {
+                "staticDistDir": ".",
+                "url": [
+                  "/index.html",
+                  "/demos/demo-cafe/index.html"
+                ]
+              },
+              "assert": {
+                "assertions": {
+                  "categories:performance": ["warn", { "minScore": 0.8 }],
+                  "categories:accessibility": ["error", { "minScore": 0.8 }],
+                  "categories:seo": ["warn", { "minScore": 0.8 }],
+                  "categories:best-practices": ["warn", { "minScore": 0.8 }]
+                }
+              },
+              "upload": {
+                "target": "temporary-public-storage"
+              }
+            }
+          }
+          CONF
+
+      - name: Run Lighthouse CI
+        run: lhci autorun --config lighthouserc.json
+
+  # ── Job 5: Security & Best Practices ──
+  security-check:
+    name: Security & Best Practices
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for exposed secrets
+        run: |
+          echo "=== Checking for potential API keys ==="
+          if grep -rniE '(api[_-]?key|secret[_-]?key|password)\s*[:=]\s*["\x27][A-Za-z0-9]{16,}' --include="*.html" --include="*.js" --include="*.css" .; then
+            echo "::error::Potential secrets found in source files!"
+            exit 1
+          fi
+          echo "No exposed secrets found."
+
+      - name: Check images have alt attributes
+        run: |
+          echo "=== Checking images for alt attributes ==="
+          MISSING_ALT=0
+          for file in $(find . -name "*.html" -not -path "./.git/*"); do
+            # Find <img tags without alt attribute
+            RESULTS=$(grep -n '<img ' "$file" | grep -v 'alt=' || true)
+            if [ -n "$RESULTS" ]; then
+              echo "::warning file=$file::Images missing alt attribute:"
+              echo "$RESULTS"
+              MISSING_ALT=1
+            fi
+          done
+          if [ "$MISSING_ALT" -eq 1 ]; then
+            echo "::error::Some images are missing alt attributes!"
+            exit 1
+          fi
+          echo "All images have alt attributes."
+
+      - name: Check external links have rel="noopener"
+        run: |
+          echo "=== Checking external links for rel=noopener ==="
+          MISSING_REL=0
+          for file in $(find . -name "*.html" -not -path "./.git/*"); do
+            # Find target="_blank" links without rel containing noopener
+            RESULTS=$(grep -n 'target="_blank"' "$file" | grep -v 'rel=.*noopener' || true)
+            if [ -n "$RESULTS" ]; then
+              echo "::warning file=$file::External links missing rel=noopener:"
+              echo "$RESULTS"
+              MISSING_REL=1
+            fi
+          done
+          if [ "$MISSING_REL" -eq 1 ]; then
+            echo "::error::Some external links are missing rel=noopener!"
+            exit 1
+          fi
+          echo "All external links have rel=noopener."
