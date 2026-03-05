@@ -46,7 +46,7 @@ body::after {
 
 /* Portfolio Bar */
 .portfolio-bar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;

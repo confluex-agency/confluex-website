@@ -49,7 +49,7 @@ body {
     text-align: center;
     font-size: 0.875rem;
     font-weight: 500;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;

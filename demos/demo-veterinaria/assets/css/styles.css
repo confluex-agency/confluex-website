@@ -32,7 +32,7 @@ body {
 
 /* === PORTFOLIO BAR === */
 .portfolio-bar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  position: absolute; top: 0; left: 0; right: 0; z-index: 200;
   background: #1a1a2e; color: #fff; padding: 10px 24px;
   text-align: center; font-size: 0.85rem; font-weight: 500;
 }

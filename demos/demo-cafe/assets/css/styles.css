@@ -36,7 +36,7 @@ body {
 
 /* === PORTFOLIO BAR === */
 .portfolio-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10000;
+    position: absolute; top: 0; left: 0; right: 0; z-index: 10000;
     background: var(--espresso); color: var(--cream);
     padding: 10px 24px; text-align: center;
     font-size: 0.85rem; font-weight: 400;
