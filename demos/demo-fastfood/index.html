@@ -1,468 +1,496 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor de mi Tierra | Demo Confluex</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Sabor de mi Tierra - Almuerzos caseros, ingredientes frescos y la sazon de la abuela. Comida tipica colombiana en Manizales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
 
+    <!-- Portfolio Bar -->
     <div class="portfolio-bar">
-        Este es un proyecto de demostración creado por <a href="../../index.html">Confluex</a>.
+        Este es un proyecto de demostracion creado por <a href="../../index.html">Confluex</a>
     </div>
 
-    <header>
-        <div class="logo">
-            <i class="fas fa-fire-burner"></i> Sabor de mi Tierra
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#menu">Nuestro Menú</a></li>
-            <li><a href="#">Zonas de Cobertura</a></li>
-            <li><a href="#" class="btn-order-nav"><i class="fas fa-motorcycle"></i> Pedir Domicilio</a></li>
-        </ul>
-    </header>
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#domicilios" class="mobile-link">Domicilios</a>
+        <a href="#galeria" class="mobile-link">Galeria</a>
+        <a href="#ubicacion" class="mobile-link">Encuentranos</a>
+        <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="mobile-cta mobile-link"><i class="fab fa-whatsapp"></i> Pedir Domicilio</a>
+    </div>
 
-    <section class="hero">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo"><i class="fas fa-fire-burner"></i> Sabor de mi Tierra</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#domicilios">Domicilios</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#ubicacion">Encuentranos</a></li>
+            </ul>
+            <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="nav-cta"><i class="fab fa-whatsapp"></i> Pedir Domicilio</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
         <div class="hero-content">
-            <h1>El auténtico sabor de Colombia, <span>directo a tu mesa</span></h1>
-            <p>Almuerzos caseros, ingredientes frescos y la sazón de la abuela. Disfruta de la mejor gastronomía típica
-                sin salir de casa o la oficina.</p>
-            <a href="#" class="btn-main">
-                <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
-            </a>
+            <div class="hero-badge reveal"><i class="fas fa-fire"></i> Comida Tipica Colombiana</div>
+            <h1 class="hero-title reveal stagger-1">El autentico sabor de Colombia, <span>directo a tu mesa</span></h1>
+            <p class="hero-desc reveal stagger-2">Almuerzos caseros, ingredientes frescos y la sazon de la abuela. Disfruta de la mejor gastronomia tipica sin salir de casa o la oficina.</p>
+            <div class="hero-buttons reveal stagger-3">
+                <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                <a href="#menu" class="btn-outline"><i class="fas fa-utensils"></i> Ver Menu</a>
+            </div>
+            <div class="hero-stats reveal stagger-4">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Platos Diarios</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Anos de Sabor</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8K+</div>
+                    <div class="stat-label">Clientes Felices</div>
+                </div>
+            </div>
         </div>
-        <div class="hero-img">
-            <img src="https://web.didiglobal.com/_next/image/?url=https%3A%2F%2Fimages.ctfassets.net%2Fn7hs0hadu6ro%2F2GpS2sj9s16T3uGHgeg4U4%2F44139a44830eaca129c3c361080a3c11%2FiStock-1006838344.jpg&w=3840&q=75"
-                alt="Comida Típica Colombiana">
-            <div class="floating-badge">
+        <div class="hero-image reveal stagger-2">
+            <img src="./assets/img/hero.jpg" alt="Comida Tipica Colombiana">
+            <div class="hero-floating">
                 <i class="fas fa-star"></i>
-                <div>
-                    <span style="display: block; font-size: 0.8rem; color: #666;">Calidad Garantizada</span>
-                    <span>100% Sazón Casera</span>
+                <div class="hero-floating-text">
+                    <span>Calidad Garantizada</span>
+                    <strong>100% Sazon Casera</strong>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Menu -->
     <section class="menu-section" id="menu">
-        <h2>Nuestros Platos Estrella</h2>
-        <p>Preparamos cada almuerzo con dedicación y los mejores ingredientes locales.</p>
-
-        <div class="menu-grid">
-
-            <div class="food-card">
-                <div class="food-img">
-                    <img src="https://i0.wp.com/worldofweinberg.com/wp-content/uploads/2025/09/bandeja-paisa.jpg?fit=736%2C490&ssl=1"
-                        alt="Bandeja Paisa">
-                </div>
-                <div class="food-info">
-                    <div class="food-title">
-                        <span>Bandeja Paisa</span>
-                        <span class="food-price">$25.000</span>
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-utensils"></i> Nuestro Menu</div>
+                <h2 class="section-title">Platos que Enamoran</h2>
+                <p class="section-desc">Preparamos cada almuerzo con dedicacion y los mejores ingredientes locales.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="food-card reveal stagger-1">
+                    <div class="food-img">
+                        <img src="https://i0.wp.com/worldofweinberg.com/wp-content/uploads/2025/09/bandeja-paisa.jpg?fit=736%2C490&ssl=1" alt="Bandeja Paisa" loading="lazy">
                     </div>
-                    <p class="food-desc">La tradicional. Frijoles cargamanto, arroz, chicharrón crujiente, carne molida,
-                        chorizo, huevo frito, tajada de maduro y arepa.</p>
-                    <a href="#" class="btn-add">Agregar al Pedido</a>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Bandeja Paisa</h3><span class="food-price">$25.000</span></div>
+                        <p class="food-desc">La tradicional. Frijoles cargamanto, arroz, chicharron crujiente, carne molida, chorizo, huevo frito, tajada de maduro y arepa.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
+                </div>
+                <div class="food-card reveal stagger-2">
+                    <div class="food-img">
+                        <img src="https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/3964b77d9ff84585e562ad1bd1205e25.jpg" alt="Ajiaco" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Ajiaco Santafereno</h3><span class="food-price">$22.000</span></div>
+                        <p class="food-desc">Deliciosa sopa de tres papas con pollo desmechado, mazorca, guasca, acompanada de crema de leche, alcaparras y aguacate.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
+                </div>
+                <div class="food-card reveal stagger-3">
+                    <div class="food-img">
+                        <img src="https://i.pinimg.com/736x/7a/0b/2f/7a0b2ff4e47cc8be26effb84a9a25442.jpg" alt="Sancocho" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Sancocho de Gallina</h3><span class="food-price">$20.000</span></div>
+                        <p class="food-desc">Con el sabor del fogon de lena. Caldo sustancioso con yuca, papa, platano, gallina criolla, acompanado de arroz y ensalada.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
+                </div>
+                <div class="food-card reveal stagger-1">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80" alt="Arroz con Pollo" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Arroz con Pollo</h3><span class="food-price">$18.000</span></div>
+                        <p class="food-desc">Arroz amarillo con pollo desmechado, verduras salteadas y ensalada fresca. Incluye sopa del dia y jugo natural.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
+                </div>
+                <div class="food-card reveal stagger-2">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=600&q=80" alt="Tamal Tolimense" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Tamal Tolimense</h3><span class="food-price">$15.000</span></div>
+                        <p class="food-desc">Envuelto en hoja de platano con masa de arroz, pollo, cerdo, huevo y verduras. La tradicion en cada bocado.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
+                </div>
+                <div class="food-card reveal stagger-3">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80" alt="Empanadas Colombianas" loading="lazy">
+                    </div>
+                    <div class="food-info">
+                        <div class="food-header"><h3>Empanadas (x6)</h3><span class="food-price">$8.000</span></div>
+                        <p class="food-desc">Crujientes empanadas de maiz rellenas de carne mechada y papa criolla. Con aji casero.</p>
+                        <a href="#" class="food-btn">Agregar al Pedido</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="food-card">
-                <div class="food-img">
-                    <img src="https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/3964b77d9ff84585e562ad1bd1205e25.jpg"
-                        alt="Ajiaco">
-                </div>
-                <div class="food-info">
-                    <div class="food-title">
-                        <span>Ajiaco Santafereño</span>
-                        <span class="food-price">$22.000</span>
-                    </div>
-                    <p class="food-desc">Deliciosa sopa de tres papas con pollo desmechado, mazorca, guasca, acompañada
-                        de crema de leche, alcaparras y aguacate.</p>
-                    <a href="#" class="btn-add">Agregar al Pedido</a>
-                </div>
-            </div>
-
-            <div class="food-card">
-                <div class="food-img">
-                    <img src="https://i.pinimg.com/736x/7a/0b/2f/7a0b2ff4e47cc8be26effb84a9a25442.jpg"
-                        alt="Sancocho">
-                </div>
-                <div class="food-info">
-                    <div class="food-title">
-                        <span>Sancocho de Gallina</span>
-                        <span class="food-price">$20.000</span>
-                    </div>
-                    <p class="food-desc">Con el sabor del fogón de leña. Caldo sustancioso con yuca, papa, plátano,
-                        gallina criolla, acompañado de arroz y ensalada.</p>
-                    <a href="#" class="btn-add">Agregar al Pedido</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <section class="location-section" id="ubicacion">
-
-        <h2 class="location-title">Encuéntranos</h2>
-        <p class="location-subtitle">
-            También puedes visitarnos directamente o recoger tu pedido en nuestro punto físico.
-        </p>
-
-        <div class="location-container">
-
-            <!-- INFO -->
-            <div class="location-info">
-
-                <h3>Sabor de mi Tierra</h3>
-
-                <p><i class="fas fa-map-marker-alt"></i> Manizales, Caldas</p>
-                <p><i class="fas fa-clock"></i> Lun-Dom: 11:00 AM – 9:00 PM</p>
-                <p><i class="fas fa-phone"></i> +57 324 562 0084</p>
-
-                <a href="https://maps.google.com?q=Manizales%20Caldas" target="_blank" class="btn-location">
-                    Cómo llegar
-                </a>
-
+    <!-- Delivery -->
+    <section class="delivery" id="domicilios">
+        <div class="delivery-grid">
+            <div class="delivery-content reveal">
+                <h2>Domicilios a <span>tu puerta</span></h2>
+                <p>Llevamos el autentico sabor colombiano hasta donde estes. Pedido facil por WhatsApp, pago contra entrega.</p>
+                <div class="delivery-features">
+                    <div class="delivery-feature">
+                        <div class="delivery-feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="delivery-feature-text">
+                            <strong>Zona de Cobertura</strong>
+                            <span>Manizales centro y alrededores</span>
+                        </div>
+                    </div>
+                    <div class="delivery-feature">
+                        <div class="delivery-feature-icon"><i class="fas fa-receipt"></i></div>
+                        <div class="delivery-feature-text">
+                            <strong>Pedido Minimo</strong>
+                            <span>$18.000 COP</span>
+                        </div>
+                    </div>
+                    <div class="delivery-feature">
+                        <div class="delivery-feature-icon"><i class="fas fa-motorcycle"></i></div>
+                        <div class="delivery-feature-text">
+                            <strong>Costo de Envio</strong>
+                            <span>$4.000 COP</span>
+                        </div>
+                    </div>
+                    <div class="delivery-feature">
+                        <div class="delivery-feature-icon"><i class="fas fa-clock"></i></div>
+                        <div class="delivery-feature-text">
+                            <strong>Tiempo Estimado</strong>
+                            <span>30 - 45 minutos</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Pedir Ahora</a>
             </div>
-
-            <!-- MAPA -->
-            <div class="location-map">
-                <iframe src="https://www.google.com/maps?q=Manizales%20Caldas&output=embed" loading="lazy"
-                    allowfullscreen>
-                </iframe>
+            <div class="delivery-image reveal stagger-2">
+                <img src="./assets/img/gallery-1.jpg" alt="Comida para domicilio" loading="lazy">
             </div>
-
         </div>
-
     </section>
 
+    <!-- Gallery -->
+    <section class="gallery" id="galeria">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-camera"></i> Galeria</div>
+                <h2 class="section-title">Nuestro Sabor en Imagenes</h2>
+                <p class="section-desc">Cada plato cuenta una historia de tradicion y dedicacion.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal stagger-1"><img src="./assets/img/gallery-1.jpg" alt="Platos del restaurante" loading="lazy"></div>
+                <div class="gallery-item reveal stagger-2"><img src="./assets/img/gallery-2.jpg" alt="Preparacion en cocina" loading="lazy"></div>
+                <div class="gallery-item reveal stagger-3"><img src="./assets/img/gallery-3.jpg" alt="Ambiente del restaurante" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    © 2026 Sabor de mi Tierra — Diseño web por <a href="../../index.html">Confluex</a>
-  </footer>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-heart"></i> Testimonios</div>
+                <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+                <p class="section-desc">Miles de familias ya disfrutan de nuestro sabor casero.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal stagger-1">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"La bandeja paisa es espectacular. Me recuerda a la comida de mi abuela en Antioquia. El domicilio llega rapido y caliente."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Jorge P." class="testimonial-avatar" loading="lazy">
+                        <div><div class="testimonial-name">Jorge Perez</div><div class="testimonial-role">Cliente frecuente</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-2">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"Pedimos para toda la oficina y todos quedaron encantados. Las porciones son generosas y el sabor es autentico. 100% recomendado."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Maria C." class="testimonial-avatar" loading="lazy">
+                        <div><div class="testimonial-name">Maria Castillo</div><div class="testimonial-role">Pedidos corporativos</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-3">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="testimonial-text">"El sancocho de gallina es el mejor de Manizales, sin duda. Se nota que cocinan con amor. Ya soy cliente fiel hace 3 anos."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Sandra L." class="testimonial-avatar" loading="lazy">
+                        <div><div class="testimonial-name">Sandra Lopez</div><div class="testimonial-role">Amante de la cocina</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CHATBOT WIDGET -->
-  <div id="chatbot">
-    <button id="chatBtn" aria-label="Abrir chat">💬</button>
-    <div id="chatWindow">
-      <div class="chat-header">
-        <span>🍽️ Sabor de mi Tierra</span>
-        <button id="chatClose" aria-label="Cerrar chat">&times;</button>
-      </div>
-      <div id="chatMessages"></div>
-      <div id="chatInput" class="chat-input-wrap" style="display:none;">
-        <input type="text" id="chatText" placeholder="Escribe aquí..." autocomplete="off">
-        <button id="chatSend">➤</button>
-      </div>
-      <div id="chatOptions"></div>
+    <!-- Location -->
+    <section class="location" id="ubicacion">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-map-marker-alt"></i> Encuentranos</div>
+                <h2 class="section-title">Visitanos o Pide a Domicilio</h2>
+                <p class="section-desc">Tambien puedes venir directamente o recoger tu pedido en nuestro punto fisico.</p>
+            </div>
+            <div class="location-grid">
+                <div class="location-info reveal stagger-1">
+                    <h3>Sabor de mi Tierra</h3>
+                    <div class="loc-item">
+                        <div class="loc-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="loc-details"><h4>Direccion</h4><p>Manizales, Caldas<br>Colombia</p></div>
+                    </div>
+                    <div class="loc-item">
+                        <div class="loc-icon"><i class="fas fa-clock"></i></div>
+                        <div class="loc-details"><h4>Horario</h4><p>Lunes a Domingo<br>11:00 AM - 9:00 PM</p></div>
+                    </div>
+                    <div class="loc-item">
+                        <div class="loc-icon"><i class="fas fa-phone"></i></div>
+                        <div class="loc-details"><h4>Telefono</h4><p>+57 324 562 0084</p></div>
+                    </div>
+                    <a href="https://maps.google.com?q=Manizales%20Caldas" target="_blank" rel="noopener" class="loc-btn"><i class="fas fa-directions"></i> Como llegar</a>
+                </div>
+                <div class="location-map reveal stagger-2">
+                    <iframe src="https://www.google.com/maps?q=Manizales%20Caldas&output=embed" loading="lazy" allowfullscreen title="Mapa de ubicacion"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="reveal">Hambre? Pide ahora</h2>
+        <p class="reveal stagger-1">Haz tu pedido por WhatsApp y recibe en 30-45 minutos.</p>
+        <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="cta-btn reveal stagger-2"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo"><i class="fas fa-fire-burner"></i> Sabor de mi Tierra</div>
+                <p>Comida tipica colombiana con la sazon casera que te mereces. Almuerzos, domicilios y mucho sabor.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu">Bandeja Paisa</a></li>
+                    <li><a href="#menu">Ajiaco</a></li>
+                    <li><a href="#menu">Sancocho</a></li>
+                    <li><a href="#menu">Empanadas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#domicilios">Domicilios</a></li>
+                    <li><a href="#ubicacion">Encuentranos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Manizales, Caldas</a></li>
+                    <li><a href="tel:+573245620084"><i class="fas fa-phone"></i> +57 324 562 0084</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> 11AM - 9PM</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sabor de mi Tierra &mdash; Diseno web por <a href="../../index.html">Confluex</a></p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
+        function openMenu() { mobileMenu.classList.add('active'); mobileOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+        mobileToggle.addEventListener('click', openMenu);
+        mobileClose.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeMenu));
+
+        // Scroll animations
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); revealObs.unobserve(entry.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') { e.preventDefault(); const t = document.querySelector(href); if (t) window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
+            });
+        });
+    </script>
+
+    <!-- CHATBOT WIDGET -->
+    <div id="chatbot">
+        <button id="chatBtn" aria-label="Abrir chat">&#128172;</button>
+        <div id="chatWindow">
+            <div class="chat-header">
+                <span>&#127869; Sabor de mi Tierra</span>
+                <button id="chatClose" aria-label="Cerrar chat">&times;</button>
+            </div>
+            <div id="chatMessages"></div>
+            <div id="chatInput" class="chat-input-wrap" style="display:none;">
+                <input type="text" id="chatText" placeholder="Escribe aqui..." autocomplete="off">
+                <button id="chatSend">&#10148;</button>
+            </div>
+            <div id="chatOptions"></div>
+        </div>
     </div>
-  </div>
 
-  <style>
-    #chatbot { position: fixed; bottom: 24px; right: 24px; z-index: 999; font-family: 'Poppins', sans-serif; }
-    #chatBtn {
-      width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;
-      background: var(--color-primary, #E67E22); color: white; font-size: 1.6rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.3s;
-    }
-    #chatBtn:hover { transform: scale(1.1); }
-    #chatBtn.hidden { display: none; }
-    #chatWindow {
-      display: none; flex-direction: column; width: 360px; height: 520px;
-      background: #fff; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.2);
-      overflow: hidden; position: absolute; bottom: 0; right: 0;
-    }
-    #chatWindow.open { display: flex; }
-    .chat-header {
-      background: linear-gradient(135deg, #C0392B, #E67E22); color: white; padding: 14px 18px;
-      display: flex; justify-content: space-between; align-items: center;
-      font-weight: 700; font-size: 0.95rem;
-    }
-    .chat-header button { background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer; }
-    #chatMessages {
-      flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px;
-    }
-    .chat-msg {
-      max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.85rem;
-      line-height: 1.5; animation: chatIn 0.3s ease; white-space: pre-line;
-    }
-    @keyframes chatIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    .chat-msg.bot { background: #FFF3E0; color: #333; align-self: flex-start; border-bottom-left-radius: 4px; }
-    .chat-msg.user { background: var(--color-primary, #E67E22); color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
-    .chat-msg.system { background: #E8F5E9; color: #2E7D32; align-self: center; text-align: center; font-size: 0.82rem; border-radius: 10px; }
-    #chatOptions { padding: 12px; display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid #eee; }
-    .chat-opt {
-      padding: 8px 14px; border: 1px solid #E67E22; border-radius: 20px;
-      background: white; color: #C0392B; font-size: 0.8rem; font-weight: 600;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .chat-opt:hover { background: #E67E22; color: white; }
-    .chat-input-wrap {
-      padding: 10px 12px; border-top: 1px solid #eee; display: flex; gap: 8px;
-    }
-    .chat-input-wrap input {
-      flex: 1; padding: 10px 14px; border: 1px solid #ddd; border-radius: 20px;
-      font-family: inherit; font-size: 0.85rem; outline: none;
-    }
-    .chat-input-wrap input:focus { border-color: #E67E22; }
-    .chat-input-wrap button {
-      width: 40px; height: 40px; border-radius: 50%; border: none;
-      background: #E67E22; color: white; font-size: 1.1rem; cursor: pointer;
-    }
-    .typing-dots { display: inline-flex; gap: 4px; padding: 4px 0; }
-    .typing-dots span {
-      width: 7px; height: 7px; background: #999; border-radius: 50%;
-      animation: dotBounce 1.2s infinite;
-    }
-    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes dotBounce { 0%,80%,100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
-    @media (max-width: 400px) {
-      #chatWindow { width: calc(100vw - 32px); height: 75vh; right: -8px; }
-    }
-  </style>
+    <script>
+    (function() {
+        var faq = {
+            welcome: { msg: 'Hola! Soy el asistente de Sabor de mi Tierra. Como te puedo ayudar?', options: [
+                { label: 'Ver menu', next: 'menu' }, { label: 'Reservar mesa', next: 'reserva_start' },
+                { label: 'Horarios', next: 'horarios' }, { label: 'Domicilios', next: 'domicilios' }
+            ]},
+            menu: { msg: 'Nuestros platos estrella:\n\n- Bandeja Paisa - $25.000\n- Ajiaco Santafereno - $22.000\n- Sancocho de Gallina - $20.000\n\nTodos incluyen bebida y postre del dia.', options: [
+                { label: 'Reservar mesa', next: 'reserva_start' }, { label: 'Pedir domicilio', next: 'domicilios' }, { label: 'Inicio', next: 'welcome' }
+            ]},
+            horarios: { msg: 'Horarios de atencion:\n\nLunes a Domingo\n11:00 AM - 9:00 PM\n\nLos esperamos!', options: [
+                { label: 'Ver menu', next: 'menu' }, { label: 'Reservar mesa', next: 'reserva_start' }, { label: 'Ubicacion', next: 'ubicacion' }, { label: 'Inicio', next: 'welcome' }
+            ]},
+            ubicacion: { msg: 'Nos encuentras en:\n\nManizales, Caldas\n+57 324 562 0084', options: [
+                { label: 'Google Maps', action: function(){window.open('https://maps.google.com?q=Manizales+Caldas','_blank');} },
+                { label: 'Reservar mesa', next: 'reserva_start' }, { label: 'Inicio', next: 'welcome' }
+            ]},
+            domicilios: { msg: 'Hacemos domicilios!\n\nZona de cobertura: Manizales centro y alrededores.\nPedido minimo: $18.000\nDomicilio: $4.000\n\nHaz tu pedido por WhatsApp:', options: [
+                { label: 'WhatsApp', action: function(){window.open('https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido','_blank');} },
+                { label: 'Ver menu', next: 'menu' }, { label: 'Inicio', next: 'welcome' }
+            ]}
+        };
+        var reserva = { personas: null, fecha: null, hora: null, nombre: null, telefono: null };
+        var currentStep = null;
+        var btn = document.getElementById('chatBtn'), win = document.getElementById('chatWindow'),
+            close = document.getElementById('chatClose'), msgs = document.getElementById('chatMessages'),
+            opts = document.getElementById('chatOptions'), inputWrap = document.getElementById('chatInput'),
+            inputField = document.getElementById('chatText'), sendBtn = document.getElementById('chatSend');
 
-  <script>
-  (function() {
-    // --- FAQ data ---
-    const faq = {
-      welcome: {
-        msg: '¡Hola! 👋 Soy el asistente de Sabor de mi Tierra. ¿Cómo te puedo ayudar?',
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🪑 Reservar mesa', next: 'reserva_start' },
-          { label: '🕐 Horarios', next: 'horarios' },
-          { label: '🛵 Domicilios', next: 'domicilios' }
-        ]
-      },
-      menu: {
-        msg: '🍽️ Nuestros platos estrella:\n\n• Bandeja Paisa — $25.000\n• Ajiaco Santafereño — $22.000\n• Sancocho de Gallina — $20.000\n\nTodos incluyen bebida y postre del día.',
-        options: [
-          { label: '🪑 Reservar mesa', next: 'reserva_start' },
-          { label: '🛵 Pedir domicilio', next: 'domicilios' },
-          { label: '🔙 Inicio', next: 'welcome' }
-        ]
-      },
-      horarios: {
-        msg: '🕐 Horarios de atención:\n\nLunes a Domingo\n11:00 AM – 9:00 PM\n\n¡Los esperamos!',
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🪑 Reservar mesa', next: 'reserva_start' },
-          { label: '📍 Ubicación', next: 'ubicacion' },
-          { label: '🔙 Inicio', next: 'welcome' }
-        ]
-      },
-      ubicacion: {
-        msg: '📍 Nos encuentras en:\n\nManizales, Caldas\n📞 +57 324 562 0084',
-        options: [
-          { label: '🗺️ Google Maps', action: () => window.open('https://maps.google.com?q=Manizales+Caldas','_blank') },
-          { label: '🪑 Reservar mesa', next: 'reserva_start' },
-          { label: '🔙 Inicio', next: 'welcome' }
-        ]
-      },
-      domicilios: {
-        msg: '🛵 ¡Hacemos domicilios!\n\nZona de cobertura: Manizales centro y alrededores.\nPedido mínimo: $18.000\nDomicilio: $4.000\n\nHaz tu pedido por WhatsApp:',
-        options: [
-          { label: '💬 WhatsApp', action: () => window.open('https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido','_blank') },
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🔙 Inicio', next: 'welcome' }
-        ]
-      }
-    };
+        btn.addEventListener('click', function(){ btn.classList.add('hidden'); win.classList.add('open'); if(!msgs.children.length) showFaq('welcome'); });
+        close.addEventListener('click', function(){ win.classList.remove('open'); btn.classList.remove('hidden'); });
 
-    // --- Reservation flow ---
-    const reserva = {
-      personas: null, fecha: null, hora: null, nombre: null, telefono: null
-    };
-    let currentStep = null; // tracks reservation step
+        function addMsg(text, type) { var d = document.createElement('div'); d.className = 'chat-msg ' + type; d.textContent = text; msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function showTyping() { var d = document.createElement('div'); d.className = 'chat-msg bot'; d.id = 'typing'; d.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>'; msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight; }
+        function removeTyping() { var t = document.getElementById('typing'); if(t) t.remove(); }
+        function botSay(text, type) { type = type || 'bot'; return new Promise(function(r){ showTyping(); setTimeout(function(){ removeTyping(); addMsg(text, type); r(); }, 600 + Math.random()*400); }); }
+        function showInput(ph) { opts.innerHTML = ''; opts.style.display = 'none'; inputWrap.style.display = 'flex'; inputField.placeholder = ph || ''; inputField.value = ''; inputField.focus(); }
+        function hideInput() { inputWrap.style.display = 'none'; opts.style.display = 'flex'; }
 
-    const btn = document.getElementById('chatBtn');
-    const win = document.getElementById('chatWindow');
-    const close = document.getElementById('chatClose');
-    const msgs = document.getElementById('chatMessages');
-    const opts = document.getElementById('chatOptions');
-    const inputWrap = document.getElementById('chatInput');
-    const inputField = document.getElementById('chatText');
-    const sendBtn = document.getElementById('chatSend');
-
-    btn.addEventListener('click', () => { btn.classList.add('hidden'); win.classList.add('open'); if (!msgs.children.length) showFaq('welcome'); });
-    close.addEventListener('click', () => { win.classList.remove('open'); btn.classList.remove('hidden'); });
-
-    function addMsg(text, type) {
-      const d = document.createElement('div');
-      d.className = 'chat-msg ' + type;
-      d.textContent = text;
-      msgs.appendChild(d);
-      msgs.scrollTop = msgs.scrollHeight;
-    }
-
-    function showTyping() {
-      const d = document.createElement('div');
-      d.className = 'chat-msg bot';
-      d.id = 'typing';
-      d.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
-      msgs.appendChild(d);
-      msgs.scrollTop = msgs.scrollHeight;
-    }
-    function removeTyping() { const t = document.getElementById('typing'); if (t) t.remove(); }
-
-    function botSay(text, type) {
-      type = type || 'bot';
-      return new Promise(r => {
-        showTyping();
-        setTimeout(() => { removeTyping(); addMsg(text, type); r(); }, 600 + Math.random() * 400);
-      });
-    }
-
-    function showInput(placeholder) {
-      opts.innerHTML = '';
-      opts.style.display = 'none';
-      inputWrap.style.display = 'flex';
-      inputField.placeholder = placeholder || 'Escribe aquí...';
-      inputField.value = '';
-      inputField.focus();
-    }
-    function hideInput() { inputWrap.style.display = 'none'; opts.style.display = 'flex'; }
-
-    function showFaq(key) {
-      currentStep = null;
-      hideInput();
-      const step = faq[key];
-      opts.innerHTML = '';
-      botSay(step.msg).then(() => {
-        step.options.forEach(o => {
-          const b = document.createElement('button');
-          b.className = 'chat-opt';
-          b.textContent = o.label;
-          b.addEventListener('click', () => {
-            addMsg(o.label, 'user');
-            if (o.action) { o.action(); if (o.next) setTimeout(() => showFaq(o.next), 500); }
-            else if (o.next === 'reserva_start') setTimeout(() => startReserva(), 400);
-            else setTimeout(() => showFaq(o.next), 400);
-          });
-          opts.appendChild(b);
-        });
-      });
-    }
-
-    // --- Reservation conversation ---
-    async function startReserva() {
-      currentStep = 'personas';
-      reserva.personas = reserva.fecha = reserva.hora = reserva.nombre = reserva.telefono = null;
-      opts.innerHTML = '';
-      await botSay('¡Perfecto! Vamos a reservar tu mesa. 🪑');
-      await botSay('¿Para cuántas personas?');
-      // Show quick options for common sizes
-      opts.innerHTML = '';
-      opts.style.display = 'flex';
-      [1,2,3,4,5,6,'Más de 6'].forEach(n => {
-        const b = document.createElement('button');
-        b.className = 'chat-opt';
-        b.textContent = typeof n === 'number' ? n + (n===1 ? ' persona' : ' personas') : n;
-        b.addEventListener('click', () => handleReservaInput(typeof n === 'number' ? String(n) : '7'));
-        opts.appendChild(b);
-      });
-    }
-
-    async function handleReservaInput(value) {
-      addMsg(value, 'user');
-      opts.innerHTML = '';
-
-      if (currentStep === 'personas') {
-        reserva.personas = value;
-        currentStep = 'fecha';
-        await botSay('¿Qué día te gustaría venir?');
-        opts.style.display = 'flex';
-        // Generate next 5 days
-        const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
-        const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-        for (let i = 0; i < 5; i++) {
-          const d = new Date(); d.setDate(d.getDate() + i);
-          const label = i === 0 ? 'Hoy' : i === 1 ? 'Mañana' : days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
-          const b = document.createElement('button');
-          b.className = 'chat-opt';
-          b.textContent = label;
-          b.addEventListener('click', () => handleReservaInput(label));
-          opts.appendChild(b);
+        function showFaq(key) {
+            currentStep = null; hideInput(); var step = faq[key]; opts.innerHTML = '';
+            botSay(step.msg).then(function(){
+                step.options.forEach(function(o){ var b = document.createElement('button'); b.className = 'chat-opt'; b.textContent = o.label;
+                    b.addEventListener('click', function(){ addMsg(o.label, 'user');
+                        if(o.action){ o.action(); if(o.next) setTimeout(function(){ showFaq(o.next); }, 500); }
+                        else if(o.next === 'reserva_start') setTimeout(function(){ startReserva(); }, 400);
+                        else setTimeout(function(){ showFaq(o.next); }, 400);
+                    }); opts.appendChild(b);
+                });
+            });
         }
-      }
-      else if (currentStep === 'fecha') {
-        reserva.fecha = value;
-        currentStep = 'hora';
-        await botSay('¿A qué hora? Abrimos de 11 AM a 9 PM.');
-        opts.style.display = 'flex';
-        ['12:00 PM','1:00 PM','2:00 PM','6:00 PM','7:00 PM','8:00 PM'].forEach(h => {
-          const b = document.createElement('button');
-          b.className = 'chat-opt';
-          b.textContent = h;
-          b.addEventListener('click', () => handleReservaInput(h));
-          opts.appendChild(b);
-        });
-      }
-      else if (currentStep === 'hora') {
-        reserva.hora = value;
-        currentStep = 'nombre';
-        await botSay('¿A nombre de quién la reserva?');
-        showInput('Tu nombre...');
-      }
-      else if (currentStep === 'nombre') {
-        reserva.nombre = value;
-        currentStep = 'telefono';
-        await botSay('Y un número de contacto por si necesitamos comunicarnos:');
-        showInput('Tu teléfono...');
-      }
-      else if (currentStep === 'telefono') {
-        reserva.telefono = value;
-        currentStep = null;
-        hideInput();
 
-        await botSay('Confirmando tu reserva...');
+        function startReserva() {
+            currentStep = 'personas'; reserva = { personas:null, fecha:null, hora:null, nombre:null, telefono:null };
+            opts.innerHTML = '';
+            botSay('Perfecto! Vamos a reservar tu mesa.').then(function(){ return botSay('Para cuantas personas?'); }).then(function(){
+                opts.innerHTML = ''; opts.style.display = 'flex';
+                [1,2,3,4,5,6,'Mas de 6'].forEach(function(n){ var b = document.createElement('button'); b.className = 'chat-opt';
+                    b.textContent = typeof n === 'number' ? n + (n===1?' persona':' personas') : n;
+                    b.addEventListener('click', function(){ handleRes(typeof n === 'number' ? String(n) : '7'); }); opts.appendChild(b);
+                });
+            });
+        }
 
-        const resumen = '✅ ¡Reserva confirmada!\n\n'
-          + '👤 ' + reserva.nombre + '\n'
-          + '👥 ' + reserva.personas + (reserva.personas === '1' ? ' persona' : ' personas') + '\n'
-          + '📅 ' + reserva.fecha + '\n'
-          + '🕐 ' + reserva.hora + '\n'
-          + '📞 ' + reserva.telefono + '\n\n'
-          + '¡Te esperamos en Sabor de mi Tierra! 🍽️';
+        function handleRes(value) {
+            addMsg(value, 'user'); opts.innerHTML = '';
+            if(currentStep === 'personas') { reserva.personas = value; currentStep = 'fecha';
+                botSay('Que dia te gustaria venir?').then(function(){ opts.style.display = 'flex';
+                    var days=['Dom','Lun','Mar','Mie','Jue','Vie','Sab'], months=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+                    for(var i=0;i<5;i++){ var d=new Date(); d.setDate(d.getDate()+i);
+                        var label = i===0?'Hoy':i===1?'Manana':days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()];
+                        (function(l){ var b=document.createElement('button'); b.className='chat-opt'; b.textContent=l;
+                            b.addEventListener('click',function(){handleRes(l);}); opts.appendChild(b); })(label);
+                    }
+                });
+            } else if(currentStep === 'fecha') { reserva.fecha = value; currentStep = 'hora';
+                botSay('A que hora? Abrimos de 11 AM a 9 PM.').then(function(){ opts.style.display = 'flex';
+                    ['12:00 PM','1:00 PM','2:00 PM','6:00 PM','7:00 PM','8:00 PM'].forEach(function(h){
+                        var b=document.createElement('button'); b.className='chat-opt'; b.textContent=h;
+                        b.addEventListener('click',function(){handleRes(h);}); opts.appendChild(b);
+                    });
+                });
+            } else if(currentStep === 'hora') { reserva.hora = value; currentStep = 'nombre';
+                botSay('A nombre de quien la reserva?').then(function(){ showInput('Tu nombre...'); });
+            } else if(currentStep === 'nombre') { reserva.nombre = value; currentStep = 'telefono';
+                botSay('Un numero de contacto:').then(function(){ showInput('Tu telefono...'); });
+            } else if(currentStep === 'telefono') { reserva.telefono = value; currentStep = null; hideInput();
+                botSay('Confirmando tu reserva...').then(function(){
+                    var r = 'Reserva confirmada!\n\n' + reserva.nombre + '\n' + reserva.personas + (reserva.personas==='1'?' persona':' personas') + '\n' + reserva.fecha + '\n' + reserva.hora + '\n' + reserva.telefono + '\n\nTe esperamos en Sabor de mi Tierra!';
+                    return botSay(r, 'system');
+                }).then(function(){
+                    opts.innerHTML = ''; opts.style.display = 'flex';
+                    [{label:'Ver menu',next:'menu'},{label:'Como llegar',next:'ubicacion'},{label:'Inicio',next:'welcome'}].forEach(function(o){
+                        var b=document.createElement('button'); b.className='chat-opt'; b.textContent=o.label;
+                        b.addEventListener('click',function(){addMsg(o.label,'user'); setTimeout(function(){showFaq(o.next);},400);}); opts.appendChild(b);
+                    });
+                });
+            }
+        }
 
-        await botSay(resumen, 'system');
-
-        opts.innerHTML = '';
-        opts.style.display = 'flex';
-        [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '📍 Cómo llegar', next: 'ubicacion' },
-          { label: '🔙 Inicio', next: 'welcome' }
-        ].forEach(o => {
-          const b = document.createElement('button');
-          b.className = 'chat-opt';
-          b.textContent = o.label;
-          b.addEventListener('click', () => { addMsg(o.label, 'user'); setTimeout(() => showFaq(o.next), 400); });
-          opts.appendChild(b);
-        });
-      }
-    }
-
-    // Text input handling
-    function submitText() {
-      const v = inputField.value.trim();
-      if (!v || !currentStep) return;
-      inputField.value = '';
-      handleReservaInput(v);
-    }
-    sendBtn.addEventListener('click', submitText);
-    inputField.addEventListener('keydown', e => { if (e.key === 'Enter') submitText(); });
-
-  })();
-  </script>
+        function submitText(){ var v=inputField.value.trim(); if(!v||!currentStep) return; inputField.value=''; handleRes(v); }
+        sendBtn.addEventListener('click', submitText);
+        inputField.addEventListener('keydown', function(e){ if(e.key==='Enter') submitText(); });
+    })();
+    </script>
 
 </body>
-
 </html>

@@ -1,301 +1,501 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Origen & Altitud | Demo Confluex</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <title>Origen & Altitud Cafe | Demo Confluex</title>
+    <meta name="description" content="Origen & Altitud Cafe - Cafe de especialidad cultivado en las montanas de Manizales. Tostado con pasion, servido en tu taza.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
 
+    <!-- Portfolio Bar -->
     <div class="portfolio-bar">
-        Este es un proyecto de demostración creado por <a href="../../index.html">Confluex</a>.
+        Este es un proyecto de demostracion creado por <a href="../../index.html">Confluex</a>
     </div>
 
-    <header>
-        <div class="logo">Origen & Altitud</div>
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#origen" class="mobile-link">Nuestro Cafe</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#galeria" class="mobile-link">Galeria</a>
+        <a href="#visitanos" class="mobile-link">Visitanos</a>
+        <a href="#menu" class="mobile-cta mobile-link">Ver Menu</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">Origen & Altitud</a>
         <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">El Café</a></li>
-            <li><a href="#">Menú</a></li>
-            <li><a href="#">Visítanos</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#origen">Nuestro Cafe</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#visitanos">Visitanos</a></li>
         </ul>
-    </header>
+        <a href="#menu" class="nav-cta-btn"><i class="fas fa-coffee"></i> Ver Menu</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
 
-    <section class="hero">
-        <h1>El Arte del Buen Café</h1>
-        <p>Cultivado en las montañas de Manizales, tostado con pasión y servido en tu taza. Despierta tus sentidos con
-            la verdadera esencia del Eje Cafetero.</p>
-        <a href="#menu" class="btn">Ver Nuestro Menú</a>
-    </section>
-
-    <section class="origin-section">
-        <div class="origin-image">
-            <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Preparación de café filtrado">
-        </div>
-        <div class="origin-text">
-            <h2>De la finca a tu taza</h2>
-            <p>No somos solo una cafetería, somos una experiencia. Trabajamos directamente con pequeños caficultores de
-                nuestra región para garantizar un comercio justo y un grano de calidad excelsa.</p>
-            <p>Cada método de filtrado que utilizamos está diseñado para resaltar las notas cítricas y a chocolate que
-                caracterizan nuestro origen.</p>
-        </div>
-    </section>
-
-    <section class="menu-section" id="menu">
-        <h2>Nuestros Clásicos</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3>Espresso Doble</h3>
-                    <span class="menu-price">$4.500</span>
-                </div>
-                <p class="menu-desc">Extracción intensa, cuerpo sedoso y crema avellanada.</p>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge reveal"><i class="fas fa-mountain"></i> Eje Cafetero, Colombia</div>
+            <h1 class="hero-title reveal stagger-1">El Arte del <span>Buen Cafe</span></h1>
+            <p class="hero-desc reveal stagger-2">Cultivado en las montanas de Manizales, tostado con pasion y servido en tu taza. Despierta tus sentidos con la verdadera esencia del Eje Cafetero.</p>
+            <div class="hero-buttons reveal stagger-3">
+                <a href="#menu" class="btn-primary"><i class="fas fa-mug-hot"></i> Ver Nuestro Menu</a>
+                <a href="#origen" class="btn-secondary">Nuestra Historia</a>
             </div>
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3>Latte Macchiato</h3>
-                    <span class="menu-price">$6.800</span>
+            <div class="hero-stats reveal stagger-4">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Anos de Tradicion</div>
                 </div>
-                <p class="menu-desc">Leche texturizada coronada con un shot de nuestro tueste medio.</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3>Filtrado V60</h3>
-                    <span class="menu-price">$8.000</span>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Variedades</div>
                 </div>
-                <p class="menu-desc">Método manual que resalta la acidez brillante y notas afrutadas.</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-header">
-                    <h3>Cold Brew</h3>
-                    <span class="menu-price">$9.500</span>
+                <div class="stat-item">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-label">Clientes Felices</div>
                 </div>
-                <p class="menu-desc">Infusión en frío por 18 horas, refrescante y bajo en acidez.</p>
             </div>
         </div>
     </section>
 
-    <section class="visit-section" id="visitanos">
-
-        <h2 class="visit-title">Visítanos</h2>
-        <p class="visit-subtitle">
-            Estamos en el corazón del Eje Cafetero. Ven a vivir la experiencia del café de origen.
-        </p>
-
-        <div class="visit-container">
-
-            <!-- INFO -->
-            <div class="visit-info">
-                <h3>Origen & Altitud Café</h3>
-
-                <p><i class="fas fa-map-marker-alt"></i> Manizales, Caldas</p>
-                <p><i class="fas fa-clock"></i> Lun-Dom: 7:00 AM – 8:00 PM</p>
-                <p><i class="fas fa-phone"></i> +57 300 000 0000</p>
-
-                <a href="https://maps.google.com?q=Manizales%20Caldas" target="_blank" class="btn-visit">
-                    Cómo llegar
-                </a>
+    <!-- Origin -->
+    <section class="origin" id="origen">
+        <div class="origin-grid">
+            <div class="origin-image reveal">
+                <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=800&q=80" alt="Preparacion de cafe filtrado" loading="lazy">
+                <div class="origin-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Comercio Justo</span>
+                </div>
             </div>
-
-            <!-- MAPA -->
-            <div class="visit-map">
-                <iframe src="https://www.google.com/maps?q=Manizales%20Caldas&output=embed" loading="lazy"
-                    allowfullscreen>
-                </iframe>
+            <div class="origin-text reveal stagger-2">
+                <h2>De la finca <span>a tu taza</span></h2>
+                <p>No somos solo una cafeteria, somos una experiencia. Trabajamos directamente con pequenos caficultores de nuestra region para garantizar un comercio justo y un grano de calidad excelsa.</p>
+                <p>Cada metodo de filtrado que utilizamos esta disenado para resaltar las notas citricas y a chocolate que caracterizan nuestro origen.</p>
+                <div class="origin-features">
+                    <div class="origin-feature">
+                        <i class="fas fa-seedling"></i>
+                        <span>Grano 100% organico de altura</span>
+                    </div>
+                    <div class="origin-feature">
+                        <i class="fas fa-handshake"></i>
+                        <span>Relacion directa con caficultores</span>
+                    </div>
+                    <div class="origin-feature">
+                        <i class="fas fa-fire"></i>
+                        <span>Tostado artesanal en pequenos lotes</span>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
 
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-mug-hot"></i> Nuestro Menu</div>
+                <h2 class="section-title">Sabores que Cuentan Historias</h2>
+                <p class="section-desc">Cada taza es una invitacion a descubrir los matices del cafe de altura colombiano.</p>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-card reveal stagger-1">
+                    <div class="menu-card-header">
+                        <h3>Espresso Doble</h3>
+                        <span class="menu-price">$4.500</span>
+                    </div>
+                    <p>Extraccion intensa, cuerpo sedoso y crema avellanada. La base de todo buen cafe.</p>
+                    <span class="menu-card-tag">Clasico</span>
+                </div>
+                <div class="menu-card reveal stagger-2">
+                    <div class="menu-card-header">
+                        <h3>Latte Macchiato</h3>
+                        <span class="menu-price">$6.800</span>
+                    </div>
+                    <p>Leche texturizada coronada con un shot de nuestro tueste medio. Suave y cremoso.</p>
+                    <span class="menu-card-tag">Popular</span>
+                </div>
+                <div class="menu-card reveal stagger-3">
+                    <div class="menu-card-header">
+                        <h3>Filtrado V60</h3>
+                        <span class="menu-price">$8.000</span>
+                    </div>
+                    <p>Metodo manual que resalta la acidez brillante y notas afrutadas. Para conocedores.</p>
+                    <span class="menu-card-tag">Especialidad</span>
+                </div>
+                <div class="menu-card reveal stagger-1">
+                    <div class="menu-card-header">
+                        <h3>Cold Brew</h3>
+                        <span class="menu-price">$9.500</span>
+                    </div>
+                    <p>Infusion en frio por 18 horas, refrescante y bajo en acidez. Ideal para dias calidos.</p>
+                    <span class="menu-card-tag">Frio</span>
+                </div>
+                <div class="menu-card reveal stagger-2">
+                    <div class="menu-card-header">
+                        <h3>Cappuccino</h3>
+                        <span class="menu-price">$6.500</span>
+                    </div>
+                    <p>Espresso con espuma de leche sedosa y un toque de cacao. Equilibrio perfecto.</p>
+                    <span class="menu-card-tag">Clasico</span>
+                </div>
+                <div class="menu-card reveal stagger-3">
+                    <div class="menu-card-header">
+                        <h3>Chemex 500ml</h3>
+                        <span class="menu-price">$12.000</span>
+                    </div>
+                    <p>Filtrado limpio y brillante para compartir. Resalta dulzura natural y notas florales.</p>
+                    <span class="menu-card-tag">Especialidad</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    © 2026 Origen & Altitud Café — Diseño web por <a href="../../index.html">Confluex</a>
-  </footer>
+    <!-- Gallery -->
+    <section class="gallery" id="galeria">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-camera"></i> Galeria</div>
+                <h2 class="section-title">Momentos en Origen & Altitud</h2>
+                <p class="section-desc">Un espacio disenado para disfrutar cada sorbo.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal stagger-1">
+                    <img src="./assets/img/gallery-1.jpg" alt="Interior de la cafeteria" loading="lazy">
+                </div>
+                <div class="gallery-item reveal stagger-2">
+                    <img src="./assets/img/gallery-2.jpg" alt="Preparacion de cafe" loading="lazy">
+                </div>
+                <div class="gallery-item reveal stagger-3">
+                    <img src="./assets/img/gallery-3.jpg" alt="Ambiente del cafe" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CHATBOT WIDGET -->
-  <div id="chatbot">
-    <button id="chatBtn" aria-label="Abrir chat">💬</button>
-    <div id="chatWindow">
-      <div class="chat-header">
-        <span>☕ Origen & Altitud</span>
-        <button id="chatClose" aria-label="Cerrar chat">&times;</button>
-      </div>
-      <div id="chatMessages"></div>
-      <div id="chatOptions"></div>
-    </div>
-  </div>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-heart"></i> Testimonios</div>
+                <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+                <p class="section-desc">Historias reales de quienes ya viven la experiencia Origen & Altitud.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal stagger-1">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"El mejor cafe que he probado en Manizales. El V60 tiene unas notas citricas increibles. El ambiente es perfecto para trabajar o conversar."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos M." class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <div class="testimonial-name">Carlos Morales</div>
+                            <div class="testimonial-role">Cliente frecuente</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-2">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Me encanta que trabajan directo con los caficultores. Se nota la calidad en cada taza. El cold brew es adictivo, especialmente en verano."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Laura G." class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <div class="testimonial-name">Laura Gutierrez</div>
+                            <div class="testimonial-role">Amante del cafe</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal stagger-3">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Un lugar con alma. Desde la decoracion hasta el servicio, todo esta pensado. Mis reuniones de trabajo ahora siempre son aqui."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Ana R." class="testimonial-avatar" loading="lazy">
+                        <div>
+                            <div class="testimonial-name">Ana Rodriguez</div>
+                            <div class="testimonial-role">Emprendedora</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <style>
-    #chatbot { position: fixed; bottom: 24px; right: 24px; z-index: 999; font-family: 'Lato', sans-serif; }
-    #chatBtn {
-      width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;
-      background: var(--coffee-dark); color: white; font-size: 1.6rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: transform 0.3s;
-    }
-    #chatBtn:hover { transform: scale(1.1); }
-    #chatBtn.hidden { display: none; }
-    #chatWindow {
-      display: none; flex-direction: column; width: 340px; height: 480px;
-      background: #fff; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.2);
-      overflow: hidden; position: absolute; bottom: 0; right: 0;
-    }
-    #chatWindow.open { display: flex; }
-    .chat-header {
-      background: var(--coffee-dark); color: white; padding: 14px 18px;
-      display: flex; justify-content: space-between; align-items: center;
-      font-weight: 700; font-size: 0.95rem;
-    }
-    .chat-header button {
-      background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer;
-    }
-    #chatMessages {
-      flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px;
-    }
-    .chat-msg {
-      max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem;
-      line-height: 1.5; animation: chatFadeIn 0.3s ease;
-    }
-    @keyframes chatFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    .chat-msg.bot {
-      background: #f3ece4; color: var(--coffee-dark); align-self: flex-start;
-      border-bottom-left-radius: 4px;
-    }
-    .chat-msg.user {
-      background: var(--coffee-dark); color: white; align-self: flex-end;
-      border-bottom-right-radius: 4px;
-    }
-    #chatOptions {
-      padding: 12px; display: flex; flex-wrap: wrap; gap: 8px;
-      border-top: 1px solid #eee; min-height: 52px;
-    }
-    .chat-opt {
-      padding: 8px 14px; border: 1px solid var(--coffee-light); border-radius: 20px;
-      background: white; color: var(--coffee-dark); font-size: 0.82rem; font-weight: 600;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .chat-opt:hover { background: var(--coffee-light); color: var(--coffee-dark); }
-    @media (max-width: 400px) {
-      #chatWindow { width: calc(100vw - 32px); height: 70vh; right: -8px; }
-    }
-  </style>
+    <!-- Visit -->
+    <section class="visit" id="visitanos">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <div class="section-tag"><i class="fas fa-map-marker-alt"></i> Visitanos</div>
+                <h2 class="section-title">Te Esperamos</h2>
+                <p class="section-desc">Ven a vivir la experiencia del cafe de origen en el corazon del Eje Cafetero.</p>
+            </div>
+            <div class="visit-grid">
+                <div class="visit-info reveal stagger-1">
+                    <h3>Origen & Altitud Cafe</h3>
+                    <div class="visit-item">
+                        <div class="visit-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="visit-details">
+                            <h4>Direccion</h4>
+                            <p>Manizales, Caldas<br>Eje Cafetero, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="visit-item">
+                        <div class="visit-icon"><i class="fas fa-clock"></i></div>
+                        <div class="visit-details">
+                            <h4>Horario</h4>
+                            <p>Lunes a Domingo<br>7:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="visit-item">
+                        <div class="visit-icon"><i class="fas fa-phone"></i></div>
+                        <div class="visit-details">
+                            <h4>Telefono</h4>
+                            <p>+57 300 000 0000</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com?q=Manizales%20Caldas" target="_blank" rel="noopener" class="visit-btn">
+                        <i class="fas fa-directions"></i> Como llegar
+                    </a>
+                </div>
+                <div class="visit-map reveal stagger-2">
+                    <iframe src="https://www.google.com/maps?q=Manizales%20Caldas&output=embed" loading="lazy" allowfullscreen title="Mapa de ubicacion"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-  (function() {
-    const data = {
-      welcome: {
-        msg: '¡Hola! 👋 Bienvenido a Origen & Altitud Café. ¿En qué te puedo ayudar?',
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🕐 Horarios', next: 'horarios' },
-          { label: '📍 Ubicación', next: 'ubicacion' },
-          { label: '📞 Reservar mesa', next: 'reservar' }
-        ]
-      },
-      menu: {
-        msg: '☕ Nuestros clásicos:\n\n• Espresso Doble — $4.500\n• Latte Macchiato — $6.800\n• Filtrado V60 — $8.000\n• Cold Brew — $9.500\n\n¿Te interesa algo más?',
-        options: [
-          { label: '🕐 Horarios', next: 'horarios' },
-          { label: '📞 Reservar mesa', next: 'reservar' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      },
-      horarios: {
-        msg: '🕐 Nuestro horario:\n\nLunes a Domingo\n7:00 AM – 8:00 PM\n\n¡Te esperamos!',
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '📍 Ubicación', next: 'ubicacion' },
-          { label: '📞 Reservar mesa', next: 'reservar' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      },
-      ubicacion: {
-        msg: '📍 Estamos en:\n\nManizales, Caldas\nEn el corazón del Eje Cafetero\n\n📞 +57 300 000 0000',
-        options: [
-          { label: '🗺️ Ver en Google Maps', next: 'maps' },
-          { label: '🕐 Horarios', next: 'horarios' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      },
-      maps: {
-        msg: '¡Te abrimos Google Maps para que nos encuentres fácilmente! 🗺️',
-        action: () => window.open('https://maps.google.com?q=Manizales+Caldas', '_blank'),
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '📞 Reservar mesa', next: 'reservar' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      },
-      reservar: {
-        msg: '📞 Para reservar tu mesa:\n\nLlámanos o escríbenos por WhatsApp al:\n+57 300 000 0000\n\nIndícanos fecha, hora y cantidad de personas. ¡Con gusto te atendemos!',
-        options: [
-          { label: '💬 WhatsApp', next: 'whatsapp' },
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      },
-      whatsapp: {
-        msg: '¡Te redirigimos a WhatsApp! 💬',
-        action: () => window.open('https://wa.me/573000000000?text=Hola!%20Quiero%20reservar%20una%20mesa', '_blank'),
-        options: [
-          { label: '📋 Ver menú', next: 'menu' },
-          { label: '🔙 Volver al inicio', next: 'welcome' }
-        ]
-      }
-    };
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">Origen & Altitud</div>
+                <p>Cafe de especialidad cultivado en las montanas del Eje Cafetero. Tostado con pasion, servido con amor.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu">Espresso</a></li>
+                    <li><a href="#menu">Filtrados</a></li>
+                    <li><a href="#menu">Frios</a></li>
+                    <li><a href="#menu">Acompanantes</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#origen">Nuestro Cafe</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#visitanos">Visitanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Manizales, Caldas</a></li>
+                    <li><a href="tel:+573000000000"><i class="fas fa-phone"></i> +57 300 000 0000</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> 7AM - 8PM</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Origen & Altitud Cafe &mdash; Diseno web por <a href="../../index.html">Confluex</a></p>
+        </div>
+    </footer>
 
-    const btn = document.getElementById('chatBtn');
-    const win = document.getElementById('chatWindow');
-    const close = document.getElementById('chatClose');
-    const msgs = document.getElementById('chatMessages');
-    const opts = document.getElementById('chatOptions');
+    <!-- JS: Navbar, Mobile Menu, Scroll Animations -->
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
 
-    btn.addEventListener('click', () => {
-      btn.classList.add('hidden');
-      win.classList.add('open');
-      if (!msgs.children.length) showStep('welcome');
-    });
-    close.addEventListener('click', () => {
-      win.classList.remove('open');
-      btn.classList.remove('hidden');
-    });
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileClose = document.getElementById('mobileClose');
 
-    function addMsg(text, type) {
-      const div = document.createElement('div');
-      div.className = 'chat-msg ' + type;
-      div.textContent = text;
-      msgs.appendChild(div);
-      msgs.scrollTop = msgs.scrollHeight;
-    }
+        function openMenu() { mobileMenu.classList.add('active'); mobileOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active'); document.body.style.overflow = ''; }
 
-    function showStep(key) {
-      const step = data[key];
-      opts.innerHTML = '';
-      addMsg(step.msg, 'bot');
-      if (step.action) setTimeout(step.action, 600);
-      step.options.forEach(o => {
-        const b = document.createElement('button');
-        b.className = 'chat-opt';
-        b.textContent = o.label;
-        b.addEventListener('click', () => {
-          addMsg(o.label, 'user');
-          setTimeout(() => showStep(o.next), 400);
+        mobileToggle.addEventListener('click', openMenu);
+        mobileClose.addEventListener('click', closeMenu);
+        mobileOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeMenu));
+
+        // Scroll animations
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                    }
+                }
+            });
         });
-        opts.appendChild(b);
-      });
-    }
-  })();
-  </script>
+    </script>
+
+    <!-- CHATBOT WIDGET -->
+    <div id="chatbot">
+        <button id="chatBtn" aria-label="Abrir chat">&#9749;</button>
+        <div id="chatWindow">
+            <div class="chat-header">
+                <span>&#9749; Origen & Altitud</span>
+                <button id="chatClose" aria-label="Cerrar chat">&times;</button>
+            </div>
+            <div id="chatMessages"></div>
+            <div id="chatOptions"></div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const data = {
+            welcome: {
+                msg: 'Hola! Bienvenido a Origen & Altitud Cafe. En que te puedo ayudar?',
+                options: [
+                    { label: 'Ver menu', next: 'menu' },
+                    { label: 'Horarios', next: 'horarios' },
+                    { label: 'Ubicacion', next: 'ubicacion' },
+                    { label: 'Reservar mesa', next: 'reservar' }
+                ]
+            },
+            menu: {
+                msg: 'Nuestros clasicos:\n\n- Espresso Doble - $4.500\n- Latte Macchiato - $6.800\n- Filtrado V60 - $8.000\n- Cold Brew - $9.500\n\nTe interesa algo mas?',
+                options: [
+                    { label: 'Horarios', next: 'horarios' },
+                    { label: 'Reservar mesa', next: 'reservar' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            },
+            horarios: {
+                msg: 'Nuestro horario:\n\nLunes a Domingo\n7:00 AM - 8:00 PM\n\nTe esperamos!',
+                options: [
+                    { label: 'Ver menu', next: 'menu' },
+                    { label: 'Ubicacion', next: 'ubicacion' },
+                    { label: 'Reservar mesa', next: 'reservar' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            },
+            ubicacion: {
+                msg: 'Estamos en:\n\nManizales, Caldas\nEn el corazon del Eje Cafetero\n\n+57 300 000 0000',
+                options: [
+                    { label: 'Ver en Google Maps', next: 'maps' },
+                    { label: 'Horarios', next: 'horarios' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            },
+            maps: {
+                msg: 'Te abrimos Google Maps para que nos encuentres facilmente!',
+                action: () => window.open('https://maps.google.com?q=Manizales+Caldas', '_blank'),
+                options: [
+                    { label: 'Ver menu', next: 'menu' },
+                    { label: 'Reservar mesa', next: 'reservar' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            },
+            reservar: {
+                msg: 'Para reservar tu mesa:\n\nLlamanos o escribenos por WhatsApp al:\n+57 300 000 0000\n\nIndicanos fecha, hora y cantidad de personas. Con gusto te atendemos!',
+                options: [
+                    { label: 'WhatsApp', next: 'whatsapp' },
+                    { label: 'Ver menu', next: 'menu' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            },
+            whatsapp: {
+                msg: 'Te redirigimos a WhatsApp!',
+                action: () => window.open('https://wa.me/573000000000?text=Hola!%20Quiero%20reservar%20una%20mesa', '_blank'),
+                options: [
+                    { label: 'Ver menu', next: 'menu' },
+                    { label: 'Volver al inicio', next: 'welcome' }
+                ]
+            }
+        };
+
+        const btn = document.getElementById('chatBtn');
+        const win = document.getElementById('chatWindow');
+        const close = document.getElementById('chatClose');
+        const msgs = document.getElementById('chatMessages');
+        const opts = document.getElementById('chatOptions');
+
+        btn.addEventListener('click', () => {
+            btn.classList.add('hidden');
+            win.classList.add('open');
+            if (!msgs.children.length) showStep('welcome');
+        });
+        close.addEventListener('click', () => {
+            win.classList.remove('open');
+            btn.classList.remove('hidden');
+        });
+
+        function addMsg(text, type) {
+            const div = document.createElement('div');
+            div.className = 'chat-msg ' + type;
+            div.textContent = text;
+            msgs.appendChild(div);
+            msgs.scrollTop = msgs.scrollHeight;
+        }
+
+        function showStep(key) {
+            const step = data[key];
+            opts.innerHTML = '';
+            addMsg(step.msg, 'bot');
+            if (step.action) setTimeout(step.action, 600);
+            step.options.forEach(o => {
+                const b = document.createElement('button');
+                b.className = 'chat-opt';
+                b.textContent = o.label;
+                b.addEventListener('click', () => {
+                    addMsg(o.label, 'user');
+                    setTimeout(() => showStep(o.next), 400);
+                });
+                opts.appendChild(b);
+            });
+        }
+    })();
+    </script>
 
 </body>
-
 </html>
