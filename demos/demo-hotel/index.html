@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahía Serena | Demo Confluex</title>
+  <meta name="description" content="Bahía Serena — Hotel boutique en Cartagena de Indias. Lujo tropical, vistas al Caribe y experiencias inolvidables.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+  <!-- Portfolio Bar -->
+  <div class="portfolio-bar">
+    Proyecto demo creado por <a href="../../index.html">Confluex</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">Bahía <span>Serena</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#habitaciones">Habitaciones</a></li>
+      <li><a href="#experiencias">Experiencias</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+    </ul>
+    <a href="#reservar" class="nav-cta" id="navCta">Reservar</a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Vista aérea del hotel Bahía Serena en Cartagena">
+    </div>
+    <div class="hero-content">
+      <div class="hero-label reveal">Cartagena de Indias</div>
+      <h1 class="reveal stagger-1">Donde el Caribe<br>se vuelve <em>refugio</em></h1>
+      <p class="hero-desc reveal stagger-2">Un hotel boutique frente al mar con la calidez colombiana y el lujo que mereces. Despierta con el sonido de las olas.</p>
+      <div class="hero-actions reveal stagger-3">
+        <a href="#reservar" class="btn-gold">Reservar Ahora <i class="fas fa-arrow-right"></i></a>
+        <a href="#habitaciones" class="btn-ghost">Ver Habitaciones</a>
+      </div>
+      <div class="hero-stats reveal stagger-4">
+        <div class="hero-stat">
+          <h3>4.9</h3>
+          <p>Rating Google</p>
+        </div>
+        <div class="hero-stat">
+          <h3>12</h3>
+          <p>Suites exclusivas</p>
+        </div>
+        <div class="hero-stat">
+          <h3>2018</h3>
+          <p>Desde</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="rooms-section" id="habitaciones">
+    <div class="section-label reveal">Alojamiento</div>
+    <h2 class="section-title reveal stagger-1">Nuestras Habitaciones</h2>
+    <p class="section-subtitle reveal stagger-2">Cada suite fue diseñada para que sientas el Caribe desde tu almohada.</p>
+    <div class="rooms-grid">
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Suite Caribe con vista al mar">
+        </div>
+        <div class="room-info">
+          <div class="room-type">Suite Premium</div>
+          <h3>Suite Caribe</h3>
+          <p>Vista panorámica al mar, balcón privado, bañera de hidromasaje y minibar premium. 45m² de lujo tropical.</p>
+          <div class="room-amenities">
+            <span class="room-amenity"><i class="fas fa-wifi"></i> WiFi</span>
+            <span class="room-amenity"><i class="fas fa-snowflake"></i> A/C</span>
+            <span class="room-amenity"><i class="fas fa-water"></i> Vista Mar</span>
+            <span class="room-amenity"><i class="fas fa-hot-tub-person"></i> Jacuzzi</span>
+          </div>
+          <div class="room-price">
+            <strong>$680.000</strong>
+            <span>/ noche</span>
+          </div>
+        </div>
+      </div>
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Suite Jardín tropical">
+        </div>
+        <div class="room-info">
+          <div class="room-type">Suite Deluxe</div>
+          <h3>Suite Jardín</h3>
+          <p>Rodeada de jardines tropicales con terraza privada, hamaca y ducha al aire libre. 38m² de naturaleza.</p>
+          <div class="room-amenities">
+            <span class="room-amenity"><i class="fas fa-wifi"></i> WiFi</span>
+            <span class="room-amenity"><i class="fas fa-snowflake"></i> A/C</span>
+            <span class="room-amenity"><i class="fas fa-leaf"></i> Jardín</span>
+            <span class="room-amenity"><i class="fas fa-shower"></i> Outdoor</span>
+          </div>
+          <div class="room-price">
+            <strong>$520.000</strong>
+            <span>/ noche</span>
+          </div>
+        </div>
+      </div>
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Suite Colonial en centro histórico">
+        </div>
+        <div class="room-info">
+          <div class="room-type">Suite Estándar</div>
+          <h3>Suite Colonial</h3>
+          <p>Inspirada en la arquitectura cartagenera con techos altos, ventilador de techo y piso en mosaico artesanal. 30m².</p>
+          <div class="room-amenities">
+            <span class="room-amenity"><i class="fas fa-wifi"></i> WiFi</span>
+            <span class="room-amenity"><i class="fas fa-snowflake"></i> A/C</span>
+            <span class="room-amenity"><i class="fas fa-city"></i> Centro</span>
+            <span class="room-amenity"><i class="fas fa-fan"></i> Ventilador</span>
+          </div>
+          <div class="room-price">
+            <strong>$380.000</strong>
+            <span>/ noche</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities-section" id="experiencias">
+    <div class="section-label reveal">Experiencias</div>
+    <h2 class="section-title reveal stagger-1">Más que un Hotel</h2>
+    <p class="section-subtitle reveal stagger-2">Cada detalle fue pensado para que tu estadía sea inolvidable.</p>
+    <div class="amenities-grid">
+      <div class="amenity-card reveal stagger-1">
+        <div class="amenity-icon"><i class="fas fa-umbrella-beach"></i></div>
+        <h4>Playa Privada</h4>
+        <p>Acceso exclusivo con camastros, sombrillas y servicio de bar directo en la arena.</p>
+      </div>
+      <div class="amenity-card reveal stagger-2">
+        <div class="amenity-icon"><i class="fas fa-spa"></i></div>
+        <h4>Spa & Bienestar</h4>
+        <p>Masajes con aceites locales, sauna, y rituales de relajación caribeña.</p>
+      </div>
+      <div class="amenity-card reveal stagger-3">
+        <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
+        <h4>Gastronomía Local</h4>
+        <p>Restaurante con cocina de autor inspirada en sabores del Caribe colombiano.</p>
+      </div>
+      <div class="amenity-card reveal stagger-4">
+        <div class="amenity-icon"><i class="fas fa-ship"></i></div>
+        <h4>Tours & Aventura</h4>
+        <p>Excursiones a Islas del Rosario, city tours y paseos en lancha al atardecer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section" id="galeria">
+    <div class="section-label reveal">Visual</div>
+    <h2 class="section-title reveal stagger-1">Galería</h2>
+    <p class="section-subtitle reveal stagger-2">Momentos que te esperan en Bahía Serena.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal stagger-1">
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piscina infinity con vista al mar">
+      </div>
+      <div class="gallery-item reveal stagger-2">
+        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurante del hotel">
+      </div>
+      <div class="gallery-item reveal stagger-3">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa al atardecer">
+      </div>
+      <div class="gallery-item reveal stagger-4">
+        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Spa y zona de relax">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section" id="testimonios">
+    <div class="section-label reveal">Huéspedes</div>
+    <h2 class="section-title reveal stagger-1">Experiencias Reales</h2>
+    <p class="section-subtitle reveal stagger-2">Lo que dicen quienes ya vivieron Bahía Serena.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal stagger-1">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Pasamos nuestra luna de miel aquí y fue mágico. La suite Caribe con vista al mar, el servicio impecable, la comida increíble."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Andrés y Camila">
+          <div class="testimonial-info">
+            <span>Andrés & Camila</span>
+            <small>Bogotá, Colombia</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-2">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"El mejor hotel boutique que he visitado en Colombia. Pequeño, íntimo, y con una atención personalizada que no encuentras en cadenas grandes."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah M.">
+          <div class="testimonial-info">
+            <span>Sarah M.</span>
+            <small>Dublin, Ireland</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-3">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"El tour a Islas del Rosario que organizaron fue espectacular. Y volver al hotel a un masaje en el spa... no hay nada mejor."</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="María José P.">
+          <div class="testimonial-info">
+            <span>María José P.</span>
+            <small>Santiago, Chile</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location-section" id="ubicacion">
+    <div class="location-container">
+      <div class="location-info reveal">
+        <h2>Encuéntranos</h2>
+        <p>Ubicados en el corazón de Bocagrande, a minutos del centro histórico y frente al mar Caribe.</p>
+        <div class="location-details">
+          <p><i class="fas fa-map-marker-alt"></i> Bocagrande, Cartagena de Indias</p>
+          <p><i class="fas fa-phone"></i> +57 605 000 0000</p>
+          <p><i class="fab fa-whatsapp"></i> +57 300 000 0000</p>
+          <p><i class="fas fa-clock"></i> Recepción 24 horas</p>
+          <p><i class="fas fa-plane-arrival"></i> 15 min desde aeropuerto Rafael Núñez</p>
+        </div>
+        <a class="btn-directions" href="https://maps.google.com?q=Bocagrande+Cartagena" target="_blank" rel="noopener">
+          <i class="fas fa-directions"></i> Cómo Llegar
+        </a>
+      </div>
+      <div class="map-embed reveal stagger-2">
+        <iframe src="https://www.google.com/maps?q=Bocagrande+Cartagena+Colombia&output=embed" allowfullscreen loading="lazy" title="Ubicación Bahía Serena"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="reservar">
+    <h2 class="reveal">Tu escape al <em>paraíso</em> comienza aquí</h2>
+    <p class="reveal stagger-1">Reserva directamente y obtén el mejor precio garantizado + upgrade de habitación sujeto a disponibilidad.</p>
+    <a href="https://wa.me/573000000000?text=Hola%20Bah%C3%ADa%20Serena!%20Quiero%20consultar%20disponibilidad" class="btn-cta reveal stagger-2" target="_blank" rel="noopener">
+      <i class="fab fa-whatsapp"></i> Consultar Disponibilidad
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">Bahía <span>Serena</span></div>
+        <p>Hotel boutique en Cartagena de Indias. Lujo tropical, calidez colombiana y vistas al Caribe que no olvidarás.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Hotel</h4>
+        <a href="#habitaciones">Habitaciones</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#galeria">Galería</a>
+        <a href="#testimonios">Reseñas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="#experiencias">Playa Privada</a>
+        <a href="#experiencias">Spa & Bienestar</a>
+        <a href="#experiencias">Restaurante</a>
+        <a href="#experiencias">Tours</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="tel:+576050000000"><i class="fas fa-phone"></i> +57 605 000 0000</a>
+        <a href="https://wa.me/573000000000" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:reservas@bahiaserena.co">reservas@bahiaserena.co</a>
+        <a href="#ubicacion"><i class="fas fa-map-marker-alt"></i> Bocagrande, Cartagena</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Bahía Serena — Diseño web por <a href="../../index.html">Confluex</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot">
+    <button id="chatBtn" aria-label="Abrir chat"><i class="far fa-comment-dots"></i></button>
+    <div id="chatWindow">
+      <div class="chat-header">
+        <span>Bahía Serena</span>
+        <button id="chatClose" aria-label="Cerrar chat">&times;</button>
+      </div>
+      <div id="chatMessages"></div>
+      <div id="chatInput" class="chat-input-wrap" style="display:none;">
+        <input type="text" id="chatText" placeholder="Escribe aquí..." autocomplete="off">
+        <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+      </div>
+      <div id="chatOptions"></div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    // ── Navbar scroll ──
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile menu ──
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navCta = document.getElementById('navCta');
+    const overlay = document.getElementById('mobileOverlay');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('mobile-open');
+      navCta.classList.toggle('mobile-open');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('mobile-open');
+      navCta.classList.remove('mobile-open');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
+
+    // ── Smooth scroll ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // ── IntersectionObserver ──
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ── Chatbot ──
+    const rooms = [
+      { label: '🌊 Suite Caribe', price: '$680.000/noche', desc: 'Vista al mar, jacuzzi, 45m²' },
+      { label: '🌿 Suite Jardín', price: '$520.000/noche', desc: 'Jardín tropical, terraza, 38m²' },
+      { label: '🏛️ Suite Colonial', price: '$380.000/noche', desc: 'Estilo cartagenero, centro, 30m²' }
+    ];
+
+    const faq = {
+      welcome: {
+        msg: '¡Hola! Bienvenido a Bahía Serena. Soy tu asistente de reservas. ¿En qué puedo ayudarte?',
+        options: [
+          { label: '🏨 Reservar habitación', next: 'reserva_start' },
+          { label: '🛏️ Ver habitaciones', next: 'habitaciones' },
+          { label: '🏖️ Experiencias', next: 'experiencias' },
+          { label: '📍 Ubicación', next: 'ubicacion' },
+          { label: '💬 Hablar con recepción', next: 'contacto' }
+        ]
+      },
+      habitaciones: {
+        msg: '🛏️ Nuestras suites:\n\n🌊 Suite Caribe — $680.000/noche\nVista panorámica al mar, jacuzzi, balcón privado. 45m²\n\n🌿 Suite Jardín — $520.000/noche\nJardines tropicales, terraza, ducha outdoor. 38m²\n\n🏛️ Suite Colonial — $380.000/noche\nEstilo cartagenero, techos altos, mosaico artesanal. 30m²\n\nTodas incluyen desayuno, WiFi y acceso a playa privada.',
+        options: [
+          { label: '🏨 Reservar', next: 'reserva_start' },
+          { label: '🏖️ Experiencias', next: 'experiencias' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      },
+      experiencias: {
+        msg: '🏖️ Experiencias incluidas y adicionales:\n\n✅ Incluido:\n• Playa privada con servicio de bar\n• Piscina infinity\n• Desayuno buffet\n\n💎 Adicional:\n• Spa & masajes — desde $150.000\n• Tour Islas del Rosario — $250.000/persona\n• City tour centro histórico — $120.000/persona\n• Paseo en lancha al atardecer — $180.000/pareja',
+        options: [
+          { label: '🏨 Reservar', next: 'reserva_start' },
+          { label: '🛏️ Habitaciones', next: 'habitaciones' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      },
+      ubicacion: {
+        msg: '📍 Estamos en:\n\nBocagrande, Cartagena de Indias\n📞 +57 605 000 0000\n📱 WhatsApp: +57 300 000 0000\n\n✈️ 15 min desde aeropuerto Rafael Núñez\n🚗 Transfer aeropuerto disponible ($80.000)\n\nRecepción 24 horas.',
+        options: [
+          { label: '🗺️ Google Maps', action: () => window.open('https://maps.google.com?q=Bocagrande+Cartagena','_blank') },
+          { label: '🏨 Reservar', next: 'reserva_start' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      },
+      contacto: {
+        msg: '💬 Puedes contactarnos:\n\n📱 WhatsApp: +57 300 000 0000\n📞 Teléfono: +57 605 000 0000\n📧 reservas@bahiaserena.co\n\nHorario recepción: 24 horas',
+        options: [
+          { label: '📱 WhatsApp', action: () => window.open('https://wa.me/573000000000','_blank') },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      }
+    };
+
+    // Booking state
+    const reserva = { room: null, checkin: null, checkout: null, guests: null, nombre: null, telefono: null };
+    let currentStep = null;
+
+    const btn = document.getElementById('chatBtn');
+    const win = document.getElementById('chatWindow');
+    const closeBtn = document.getElementById('chatClose');
+    const msgs = document.getElementById('chatMessages');
+    const opts = document.getElementById('chatOptions');
+    const inputWrap = document.getElementById('chatInput');
+    const inputField = document.getElementById('chatText');
+    const sendBtn = document.getElementById('chatSend');
+
+    btn.addEventListener('click', () => { btn.classList.add('hidden'); win.classList.add('open'); if (!msgs.children.length) showFaq('welcome'); });
+    closeBtn.addEventListener('click', () => { win.classList.remove('open'); btn.classList.remove('hidden'); });
+
+    function addMsg(text, type) {
+      const d = document.createElement('div');
+      d.className = 'chat-msg ' + type;
+      d.textContent = text;
+      msgs.appendChild(d);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+    function showTyping() {
+      const d = document.createElement('div');
+      d.className = 'chat-msg bot'; d.id = 'typing';
+      d.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+      msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+    }
+    function removeTyping() { const t = document.getElementById('typing'); if (t) t.remove(); }
+    function botSay(text, type) {
+      type = type || 'bot';
+      return new Promise(r => { showTyping(); setTimeout(() => { removeTyping(); addMsg(text, type); r(); }, 400 + Math.random() * 300); });
+    }
+    function showInput(ph) {
+      opts.innerHTML = ''; opts.style.display = 'none';
+      inputWrap.style.display = 'flex'; inputField.placeholder = ph || ''; inputField.value = ''; inputField.focus();
+    }
+    function hideInput() { inputWrap.style.display = 'none'; opts.style.display = 'flex'; }
+
+    function showFaq(key) {
+      currentStep = null; hideInput();
+      const step = faq[key]; opts.innerHTML = '';
+      botSay(step.msg).then(() => {
+        step.options.forEach(o => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = o.label;
+          b.addEventListener('click', () => {
+            addMsg(o.label, 'user');
+            if (o.action) { o.action(); if (o.next) setTimeout(() => showFaq(o.next), 500); }
+            else if (o.next === 'reserva_start') setTimeout(() => startReserva(), 400);
+            else setTimeout(() => showFaq(o.next), 400);
+          });
+          opts.appendChild(b);
+        });
+      });
+    }
+
+    // ── Booking flow ──
+    async function startReserva() {
+      currentStep = 'room';
+      Object.keys(reserva).forEach(k => reserva[k] = null);
+      opts.innerHTML = '';
+      await botSay('¡Perfecto! Reservemos tu estadía en Bahía Serena. 🏖️');
+      await botSay('¿Qué tipo de suite prefieres?');
+      opts.style.display = 'flex';
+      rooms.forEach(r => {
+        const b = document.createElement('button');
+        b.className = 'chat-opt';
+        b.textContent = r.label;
+        b.addEventListener('click', () => handleReserva(r.label, r));
+        opts.appendChild(b);
+      });
+    }
+
+    async function handleReserva(value, extra) {
+      addMsg(value, 'user');
+      opts.innerHTML = '';
+
+      if (currentStep === 'room') {
+        reserva.room = extra;
+        currentStep = 'checkin';
+        await botSay(extra.label + '\n' + extra.price + '\n' + extra.desc + '\n\n¿Cuándo llegas? (Check-in)');
+        opts.style.display = 'flex';
+        const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+        const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        for (let i = 0; i < 6; i++) {
+          const d = new Date(); d.setDate(d.getDate() + i);
+          const label = i === 0 ? 'Hoy' : i === 1 ? 'Mañana' : days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = label;
+          b.addEventListener('click', () => handleReserva(label));
+          opts.appendChild(b);
+        }
+      }
+      else if (currentStep === 'checkin') {
+        reserva.checkin = value;
+        currentStep = 'noches';
+        await botSay('Check-in: ' + value + ' ✅\n\n¿Cuántas noches?');
+        opts.style.display = 'flex';
+        ['1 noche','2 noches','3 noches','4 noches','5 noches','7 noches'].forEach(n => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = n;
+          b.addEventListener('click', () => handleReserva(n));
+          opts.appendChild(b);
+        });
+      }
+      else if (currentStep === 'noches') {
+        reserva.checkout = value;
+        currentStep = 'guests';
+        await botSay('¿Cuántos huéspedes?');
+        opts.style.display = 'flex';
+        ['1 persona','2 personas','3 personas','4 personas'].forEach(g => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = g;
+          b.addEventListener('click', () => handleReserva(g));
+          opts.appendChild(b);
+        });
+      }
+      else if (currentStep === 'guests') {
+        reserva.guests = value;
+        currentStep = 'nombre';
+        await botSay('¿A nombre de quién la reserva?');
+        showInput('Tu nombre completo...');
+      }
+      else if (currentStep === 'nombre') {
+        reserva.nombre = value;
+        currentStep = 'telefono';
+        await botSay('¡Gracias ' + value + '! 🌊\n\nDéjame tu WhatsApp para confirmar:');
+        showInput('Tu WhatsApp...');
+      }
+      else if (currentStep === 'telefono') {
+        reserva.telefono = value;
+        currentStep = null;
+        hideInput();
+        await botSay('Procesando tu reserva...');
+
+        const noches = parseInt(reserva.checkout) || 1;
+        const precioNoche = reserva.room.price.replace('/noche','');
+        const resumen = '✅ ¡Reserva confirmada!\n\n'
+          + '👤 ' + reserva.nombre + '\n'
+          + '🛏️ ' + reserva.room.label + ' (' + precioNoche + '/noche)\n'
+          + '📅 Check-in: ' + reserva.checkin + '\n'
+          + '🌙 ' + reserva.checkout + '\n'
+          + '👥 ' + reserva.guests + '\n'
+          + '📱 ' + reserva.telefono + '\n\n'
+          + 'Te enviaremos la confirmación por WhatsApp.\n¡Te esperamos en Bahía Serena! 🏖️';
+
+        await botSay(resumen, 'system');
+
+        opts.innerHTML = ''; opts.style.display = 'flex';
+        [
+          { label: '🛏️ Ver habitaciones', next: 'habitaciones' },
+          { label: '🏖️ Experiencias', next: 'experiencias' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ].forEach(o => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = o.label;
+          b.addEventListener('click', () => { addMsg(o.label, 'user'); setTimeout(() => showFaq(o.next), 400); });
+          opts.appendChild(b);
+        });
+      }
+    }
+
+    function submitText() {
+      const v = inputField.value.trim();
+      if (!v || !currentStep) return;
+      inputField.value = '';
+      handleReserva(v);
+    }
+    sendBtn.addEventListener('click', submitText);
+    inputField.addEventListener('keydown', e => { if (e.key === 'Enter') submitText(); });
+  })();
+  </script>
+
+</body>
+</html>
