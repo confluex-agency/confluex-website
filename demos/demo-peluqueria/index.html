@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière Atelier | Demo Confluex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+
+    <div class="portfolio-bar">
+        Este es un proyecto de demostración creado por <a href="../../index.html">Confluex</a>.
+    </div>
+
+    <header>
+        <div class="logo">Lumière Atelier</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+        <a href="#" class="btn-gold">Agendar Cita</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Alta Peluquería & Estilismo</span>
+            <h1>Tu mejor versión, revelada.</h1>
+            <p>Más que un corte, diseñamos el estilo que proyecta tu verdadera esencia. Expertos en colorimetría y cuidado capilar de lujo.</p>
+            <a href="#" class="btn-gold btn-gold-filled">Reserva Tu Transformación</a>
+        </div>
+    </section>
+
+    <section class="services-section" id="servicios">
+        <h2 class="section-title">Menú de Servicios</h2>
+        <p class="section-desc">Utilizamos exclusivamente productos de gama alta para garantizar la salud y el brillo de tu cabello.</p>
+
+        <div class="price-list">
+            <div class="price-column">
+                <h3>Corte & Styling</h3>
+                <div style="margin-top: 2rem;">
+                    <div class="price-item">
+                        <h4>Corte de Diseño Mujer</h4>
+                        <span class="price-amount">$80k</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Blower & Ondas</h4>
+                        <span class="price-amount">$45k</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Tratamiento Hidratante</h4>
+                        <span class="price-amount">$120k</span>
+                    </div>
+                </div>
+            </div>
+            <div class="price-column">
+                <h3>Color & Técnica</h3>
+                <div style="margin-top: 2rem;">
+                    <div class="price-item">
+                        <h4>Balayage / Babylights</h4>
+                        <span class="price-amount">$350k+</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Tinte Completo</h4>
+                        <span class="price-amount">$180k</span>
+                    </div>
+                    <div class="price-item">
+                        <h4>Corrección de Color</h4>
+                        <span class="price-amount">Consultar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="galeria">
+        <div class="section-desc" style="text-align: center;">
+            <h2 class="section-title">Nuestro Trabajo Real</h2>
+            <p>Resultados que hablan por sí mismos.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1620331317312-74b88bf40907?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Balayage Rubio">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corte Moderno">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Styling Ondas">
+            </div>
+        </div>
+    </section>
+
+    <section class="map-contact-section" id="ubicacion">
+  <div class="map-contact-container">
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2 class="contact-title">Visítanos</h2>
+      <p class="contact-desc">
+        Te esperamos para brindarte una experiencia de belleza premium.
+      </p>
+
+      <div class="contact-details">
+        <p><i class="fas fa-map-marker-alt"></i> Villamaría, Caldas</p>
+        <p><i class="fas fa-phone"></i> +57 300 000 0000</p>
+        <p><i class="fas fa-clock"></i> Lun-Sab: 9AM – 7PM</p>
+      </div>
+
+      <a class="btn-directions" href="https://maps.google.com?q=Villamaria%20Caldas" target="_blank" rel="noopener">
+        Cómo llegar
+      </a>
+    </div>
+
+    <!-- MAPA -->
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps?q=Villamaria%20Caldas&output=embed"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  © 2026 Lumière Atelier — Diseño web por <a href="../../index.html">Confluex</a>
+</footer>
+
+
+  <!-- CHATBOT WIDGET -->
+  <div id="chatbot">
+    <button id="chatBtn" aria-label="Abrir chat">✨</button>
+    <div id="chatWindow">
+      <div class="chat-header">
+        <span>✂️ Lumière Atelier</span>
+        <button id="chatClose" aria-label="Cerrar chat">&times;</button>
+      </div>
+      <div id="chatMessages"></div>
+      <div id="chatInput" class="chat-input-wrap" style="display:none;">
+        <input type="text" id="chatText" placeholder="Escribe aquí..." autocomplete="off">
+        <button id="chatSend">➤</button>
+      </div>
+      <div id="chatOptions"></div>
+    </div>
+  </div>
+
+  <style>
+    #chatbot { position: fixed; bottom: 24px; right: 24px; z-index: 999; font-family: 'Montserrat', sans-serif; }
+    #chatBtn {
+      width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;
+      background: linear-gradient(135deg, #4A148C, #7B1FA2); color: white; font-size: 1.5rem;
+      box-shadow: 0 4px 24px rgba(74,20,140,0.4); transition: transform 0.3s;
+    }
+    #chatBtn:hover { transform: scale(1.1); }
+    #chatBtn.hidden { display: none; }
+    #chatWindow {
+      display: none; flex-direction: column; width: 360px; height: 540px;
+      background: #fff; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+      overflow: hidden; position: absolute; bottom: 0; right: 0;
+    }
+    #chatWindow.open { display: flex; }
+    .chat-header {
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d); color: #C9A84C; padding: 14px 18px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px;
+    }
+    .chat-header button { background: none; border: none; color: #C9A84C; font-size: 1.4rem; cursor: pointer; }
+    #chatMessages {
+      flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px;
+      background: #fafafa;
+    }
+    .chat-msg {
+      max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.85rem;
+      line-height: 1.5; animation: chatIn 0.3s ease; white-space: pre-line;
+    }
+    @keyframes chatIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .chat-msg.bot { background: #f0eaf5; color: #333; align-self: flex-start; border-bottom-left-radius: 4px; }
+    .chat-msg.user { background: linear-gradient(135deg, #4A148C, #7B1FA2); color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .chat-msg.system { background: #E8F5E9; color: #2E7D32; align-self: center; text-align: center; font-size: 0.82rem; border-radius: 10px; }
+    #chatOptions { padding: 12px; display: flex; flex-wrap: wrap; gap: 8px; border-top: 1px solid #eee; }
+    .chat-opt {
+      padding: 8px 14px; border: 1px solid #C9A84C; border-radius: 20px;
+      background: white; color: #333; font-size: 0.8rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .chat-opt:hover { background: #C9A84C; color: #1a1a1a; }
+    .chat-input-wrap {
+      padding: 10px 12px; border-top: 1px solid #eee; display: flex; gap: 8px;
+    }
+    .chat-input-wrap input {
+      flex: 1; padding: 10px 14px; border: 1px solid #ddd; border-radius: 20px;
+      font-family: inherit; font-size: 0.85rem; outline: none;
+    }
+    .chat-input-wrap input:focus { border-color: #7B1FA2; }
+    .chat-input-wrap button {
+      width: 40px; height: 40px; border-radius: 50%; border: none;
+      background: #7B1FA2; color: white; font-size: 1.1rem; cursor: pointer;
+    }
+    .typing-dots { display: inline-flex; gap: 4px; padding: 4px 0; }
+    .typing-dots span {
+      width: 7px; height: 7px; background: #aaa; border-radius: 50%;
+      animation: dotB 1.2s infinite;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotB { 0%,80%,100% { transform: translateY(0); } 40% { transform: translateY(-6px); } }
+    .time-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin-top: 4px; }
+    .time-slot {
+      padding: 8px 4px; border: 1px solid #C9A84C; border-radius: 10px; text-align: center;
+      font-size: 0.78rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+      background: white; color: #333;
+    }
+    .time-slot:hover { background: #C9A84C; color: #1a1a1a; }
+    .time-slot.taken {
+      border-color: #ddd; color: #bbb; text-decoration: line-through;
+      cursor: not-allowed; pointer-events: none;
+    }
+    @media (max-width: 400px) {
+      #chatWindow { width: calc(100vw - 32px); height: 75vh; right: -8px; }
+    }
+  </style>
+
+  <script>
+  (function() {
+    // --- Simulated schedule (some slots "taken") ---
+    function getSlots() {
+      const hours = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM',
+                     '12:00 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM',
+                     '4:30 PM','5:00 PM','5:30 PM','6:00 PM','6:30 PM'];
+      const taken = new Set();
+      // Randomly block ~30% of slots to simulate a real schedule
+      const seed = new Date().getDate();
+      hours.forEach((h,i) => { if ((seed * (i+3) * 7) % 10 < 3) taken.add(h); });
+      return hours.map(h => ({ time: h, available: !taken.has(h) }));
+    }
+
+    const faq = {
+      welcome: {
+        msg: '¡Hola! ✨ Bienvenida a Lumière Atelier. Soy tu asistente de belleza. ¿En qué te puedo ayudar?',
+        options: [
+          { label: '✂️ Agendar cita', next: 'cita_start' },
+          { label: '💇 Servicios y precios', next: 'servicios' },
+          { label: '🕐 Horarios', next: 'horarios' },
+          { label: '📍 Ubicación', next: 'ubicacion' }
+        ]
+      },
+      servicios: {
+        msg: '💇 Nuestros servicios:\n\n✂️ Corte & Styling\n• Corte de Diseño Mujer — $80k\n• Blower & Ondas — $45k\n• Tratamiento Hidratante — $120k\n\n🎨 Color & Técnica\n• Balayage / Babylights — $350k+\n• Tinte Completo — $180k\n• Corrección de Color — Consultar',
+        options: [
+          { label: '✂️ Agendar cita', next: 'cita_start' },
+          { label: '🕐 Horarios', next: 'horarios' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      },
+      horarios: {
+        msg: '🕐 Horarios de atención:\n\nLunes a Sábado\n9:00 AM – 7:00 PM\n\nDomingos cerrado.',
+        options: [
+          { label: '✂️ Agendar cita', next: 'cita_start' },
+          { label: '💇 Servicios', next: 'servicios' },
+          { label: '📍 Ubicación', next: 'ubicacion' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      },
+      ubicacion: {
+        msg: '📍 Nos encuentras en:\n\nVillamaría, Caldas\n📞 +57 300 000 0000\n\nLunes a Sábado, 9AM – 7PM',
+        options: [
+          { label: '🗺️ Google Maps', action: () => window.open('https://maps.google.com?q=Villamaria+Caldas','_blank') },
+          { label: '✂️ Agendar cita', next: 'cita_start' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ]
+      }
+    };
+
+    // --- Booking state ---
+    const cita = { servicio: null, fecha: null, hora: null, nombre: null, telefono: null };
+    let currentStep = null;
+
+    const btn = document.getElementById('chatBtn');
+    const win = document.getElementById('chatWindow');
+    const close = document.getElementById('chatClose');
+    const msgs = document.getElementById('chatMessages');
+    const opts = document.getElementById('chatOptions');
+    const inputWrap = document.getElementById('chatInput');
+    const inputField = document.getElementById('chatText');
+    const sendBtn = document.getElementById('chatSend');
+
+    btn.addEventListener('click', () => { btn.classList.add('hidden'); win.classList.add('open'); if (!msgs.children.length) showFaq('welcome'); });
+    close.addEventListener('click', () => { win.classList.remove('open'); btn.classList.remove('hidden'); });
+
+    function addMsg(text, type) {
+      const d = document.createElement('div');
+      d.className = 'chat-msg ' + type;
+      d.textContent = text;
+      msgs.appendChild(d);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+    function showTyping() {
+      const d = document.createElement('div');
+      d.className = 'chat-msg bot'; d.id = 'typing';
+      d.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+      msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+    }
+    function removeTyping() { const t = document.getElementById('typing'); if (t) t.remove(); }
+    function botSay(text, type) {
+      type = type || 'bot';
+      return new Promise(r => { showTyping(); setTimeout(() => { removeTyping(); addMsg(text, type); r(); }, 500 + Math.random() * 400); });
+    }
+    function showInput(ph) {
+      opts.innerHTML = ''; opts.style.display = 'none';
+      inputWrap.style.display = 'flex'; inputField.placeholder = ph || ''; inputField.value = ''; inputField.focus();
+    }
+    function hideInput() { inputWrap.style.display = 'none'; opts.style.display = 'flex'; }
+
+    function showFaq(key) {
+      currentStep = null; hideInput();
+      const step = faq[key]; opts.innerHTML = '';
+      botSay(step.msg).then(() => {
+        step.options.forEach(o => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = o.label;
+          b.addEventListener('click', () => {
+            addMsg(o.label, 'user');
+            if (o.action) { o.action(); if (o.next) setTimeout(() => showFaq(o.next), 500); }
+            else if (o.next === 'cita_start') setTimeout(() => startCita(), 400);
+            else setTimeout(() => showFaq(o.next), 400);
+          });
+          opts.appendChild(b);
+        });
+      });
+    }
+
+    // --- Booking flow ---
+    const servicios = [
+      { label: '✂️ Corte de Diseño', dur: '45 min', price: '$80k' },
+      { label: '💨 Blower & Ondas', dur: '30 min', price: '$45k' },
+      { label: '💆 Tratamiento Hidratante', dur: '60 min', price: '$120k' },
+      { label: '🎨 Balayage / Babylights', dur: '120 min', price: '$350k+' },
+      { label: '🎨 Tinte Completo', dur: '90 min', price: '$180k' }
+    ];
+
+    async function startCita() {
+      currentStep = 'servicio';
+      cita.servicio = cita.fecha = cita.hora = cita.nombre = cita.telefono = null;
+      opts.innerHTML = '';
+      await botSay('¡Perfecto! Agendemos tu cita. ✨');
+      await botSay('¿Qué servicio te interesa?');
+      opts.style.display = 'flex';
+      servicios.forEach(s => {
+        const b = document.createElement('button');
+        b.className = 'chat-opt';
+        b.textContent = s.label;
+        b.addEventListener('click', () => handleCitaInput(s.label, s));
+        opts.appendChild(b);
+      });
+    }
+
+    async function handleCitaInput(value, extra) {
+      addMsg(value, 'user');
+      opts.innerHTML = '';
+
+      if (currentStep === 'servicio') {
+        cita.servicio = extra;
+        currentStep = 'fecha';
+        await botSay(extra.label + ' — ' + extra.price + ' (' + extra.dur + ')\n\n¿Qué día te queda bien?');
+        opts.style.display = 'flex';
+        const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+        const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        let count = 0;
+        for (let i = 0; count < 5; i++) {
+          const d = new Date(); d.setDate(d.getDate() + i);
+          if (d.getDay() === 0) continue; // skip Sunday
+          const label = count === 0 ? 'Hoy' : count === 1 ? 'Mañana' : days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = label;
+          b.addEventListener('click', () => handleCitaInput(label));
+          opts.appendChild(b);
+          count++;
+        }
+      }
+      else if (currentStep === 'fecha') {
+        cita.fecha = value;
+        currentStep = 'hora';
+        await botSay('Estos son los horarios disponibles para ' + value + ':');
+
+        // Show time grid with available/taken slots
+        const slots = getSlots();
+        const grid = document.createElement('div');
+        grid.className = 'time-grid';
+        slots.forEach(s => {
+          const t = document.createElement('button');
+          t.className = 'time-slot' + (s.available ? '' : ' taken');
+          t.textContent = s.time;
+          if (s.available) t.addEventListener('click', () => handleCitaInput(s.time));
+          grid.appendChild(t);
+        });
+        const wrapper = document.createElement('div');
+        wrapper.className = 'chat-msg bot';
+        wrapper.style.maxWidth = '95%';
+        wrapper.appendChild(grid);
+        msgs.appendChild(wrapper);
+        msgs.scrollTop = msgs.scrollHeight;
+        opts.style.display = 'none';
+      }
+      else if (currentStep === 'hora') {
+        cita.hora = value;
+        currentStep = 'nombre';
+        await botSay('Excelente, ' + value + ' ✅\n\n¿A nombre de quién agendamos?');
+        showInput('Tu nombre...');
+      }
+      else if (currentStep === 'nombre') {
+        cita.nombre = value;
+        currentStep = 'telefono';
+        await botSay('¡Hola ' + value + '! 💜\n\nDéjame un número de contacto para confirmarte:');
+        showInput('Tu teléfono...');
+      }
+      else if (currentStep === 'telefono') {
+        cita.telefono = value;
+        currentStep = null;
+        hideInput();
+        await botSay('Agendando tu cita...');
+
+        const resumen = '✅ ¡Cita confirmada!\n\n'
+          + '👤 ' + cita.nombre + '\n'
+          + '💇 ' + cita.servicio.label + ' (' + cita.servicio.price + ')\n'
+          + '📅 ' + cita.fecha + '\n'
+          + '🕐 ' + cita.hora + '\n'
+          + '⏱️ Duración: ' + cita.servicio.dur + '\n'
+          + '📞 ' + cita.telefono + '\n\n'
+          + 'Te enviaremos un recordatorio.\n¡Te esperamos en Lumière Atelier! ✨';
+
+        await botSay(resumen, 'system');
+
+        opts.innerHTML = ''; opts.style.display = 'flex';
+        [
+          { label: '💇 Ver servicios', next: 'servicios' },
+          { label: '📍 Cómo llegar', next: 'ubicacion' },
+          { label: '🔙 Inicio', next: 'welcome' }
+        ].forEach(o => {
+          const b = document.createElement('button');
+          b.className = 'chat-opt'; b.textContent = o.label;
+          b.addEventListener('click', () => { addMsg(o.label, 'user'); setTimeout(() => showFaq(o.next), 400); });
+          opts.appendChild(b);
+        });
+      }
+    }
+
+    function submitText() {
+      const v = inputField.value.trim();
+      if (!v || !currentStep) return;
+      inputField.value = '';
+      handleCitaInput(v);
+    }
+    sendBtn.addEventListener('click', submitText);
+    inputField.addEventListener('keydown', e => { if (e.key === 'Enter') submitText(); });
+  })();
+  </script>
+
+</body>
+</html>

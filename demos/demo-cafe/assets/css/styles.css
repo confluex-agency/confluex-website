@@ -1,0 +1,310 @@
+/* --- Variables Escalables (Fáciles de modificar para otros clientes) --- */
+:root {
+    --coffee-dark: #2C1E16;
+    /* Espresso */
+    --coffee-medium: #5C3D2E;
+    /* Tueste Medio */
+    --coffee-light: #D4A373;
+    /* Caramelo/Crema */
+    --bg-cream: #FDFBF7;
+    /* Fondo limpio */
+    --text-main: #333333;
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* --- Reset Básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Barra de Portafolio (Confluex) --- */
+.portfolio-bar {
+    background-color: #0A192F;
+    color: white;
+    padding: 10px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.portfolio-bar a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-bar a:hover {
+    text-decoration: underline;
+}
+
+/* --- Navegación --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 30, 22, 0.7), rgba(44, 30, 22, 0.4)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: var(--coffee-light);
+    color: var(--coffee-dark);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+/* --- Sección Origen (Nuestra Historia) --- */
+.origin-section {
+    padding: 6rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.origin-text h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--coffee-dark);
+    margin-bottom: 1.5rem;
+}
+
+.origin-text p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.origin-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Menú Destacado (Grid Escalable) --- */
+.menu-section {
+    background-color: white;
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--coffee-dark);
+    margin-bottom: 3rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 1.5rem;
+    text-align: left;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.menu-header h3 {
+    font-family: var(--font-title);
+    color: var(--coffee-medium);
+    font-size: 1.3rem;
+}
+
+.menu-price {
+    color: var(--coffee-light);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.menu-desc {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .origin-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 4rem 5%;
+        gap: 2rem;
+    }
+}
+
+/* ===== VISIT SECTION (MAPA CAFETERÍA) ===== */
+
+.visit-section {
+    padding: 90px 5%;
+    background: #faf7f2;
+    text-align: center;
+}
+
+.visit-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.visit-subtitle {
+    max-width: 600px;
+    margin: auto;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.visit-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.visit-info {
+    text-align: left;
+}
+
+.visit-info h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.visit-info p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.visit-info i {
+    margin-right: 10px;
+    color: #7a5c3e;
+}
+
+.btn-visit {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: #7a5c3e;
+    color: white;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-visit:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+.visit-map {
+    width: 100%;
+    height: 380px;
+}
+
+.visit-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .visit-container {
+        grid-template-columns: 1fr;
+    }
+}

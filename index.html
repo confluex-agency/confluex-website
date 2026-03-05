@@ -23,12 +23,33 @@
   <meta name="twitter:description" content="Diseño web, automatización y chatbots con IA.">
   <meta name="twitter:image" content="assets/social-avatar.png">
 
+  <!-- SEO -->
+  <link rel="canonical" href="https://ggiooni.github.io/confluex-website/">
+  <meta name="robots" content="index, follow">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon-256.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="assets/logo-symbol.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Confluex",
+    "description": "Soluciones digitales de diseño web, automatización de procesos y chatbots con IA. Dos culturas, un código.",
+    "url": "https://ggiooni.github.io/confluex-website/"
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +63,7 @@
       --lime: #C8FF00;
       --lime-dark: #9ECC00;
       --night: #1A1A2E;
-      --graphite: #6B6B6B;
+      --graphite: #8A8A8A;
       --surface: #111114;
       --nav-bg: rgba(10,10,10,0.92);
       --nav-border: rgba(200,255,0,0.06);
@@ -264,6 +285,10 @@
       aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center;
       font-size: 2.4rem; position: relative;
     }
+    .p-card__thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      border-radius: 24px 24px 0 0;
+    }
     .p-card__thumb--cafe { background: linear-gradient(135deg, #3E2723, #6D4C41); }
     .p-card__thumb--restaurant { background: linear-gradient(135deg, #BF360C, #E65100); }
     .p-card__thumb--salon { background: linear-gradient(135deg, #4A148C, #7B1FA2); }
@@ -293,7 +318,7 @@
     }
 
     /* === FOUNDERS === */
-    .founders { padding: 140px 0; }
+    .founders { padding: 140px 0; background: var(--surface); }
     .founders__inner {
       max-width: 1200px; margin: 0 auto; padding: 0 48px;
       display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
@@ -367,6 +392,33 @@
     .footer__links a { color: var(--graphite); text-decoration: none; font-size: 0.75rem; transition: color 0.3s; }
     .footer__links a:hover { color: var(--lime); }
 
+    /* === PORTFOLIO HOVER EFFECTS === */
+    .p-card__thumb { overflow: hidden; }
+    .p-card__thumb::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(200,255,0,0); transition: background 0.5s;
+    }
+    .p-card:hover .p-card__thumb::after { background: rgba(200,255,0,0.05); }
+    .p-card:hover .p-card__thumb { transform: scale(1.05); transition: transform 0.5s; }
+    .p-card:hover { box-shadow: 0 8px 32px rgba(200,255,0,0.06); }
+    [data-theme="light"] .p-card__thumb::after { background: rgba(122,184,0,0); }
+    [data-theme="light"] .p-card:hover .p-card__thumb::after { background: rgba(122,184,0,0.07); }
+    [data-theme="light"] .p-card:hover { box-shadow: 0 8px 32px rgba(122,184,0,0.08); }
+
+    /* === SKIP TO CONTENT === */
+    .skip-link {
+      position: absolute; top: -100%; left: 16px; z-index: 999;
+      background: var(--lime); color: var(--black); padding: 12px 24px;
+      border-radius: 8px; font-family: 'Outfit'; font-weight: 700;
+      font-size: 0.9rem; text-decoration: none; transition: top 0.2s;
+    }
+    .skip-link:focus { top: 16px; }
+
+    /* === FOCUS VISIBLE === */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--lime); outline-offset: 4px; border-radius: 4px;
+    }
+
     /* === ANIMATIONS === */
     .fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .fade.show { opacity: 1; transform: translateY(0); }
@@ -423,9 +475,12 @@
 </head>
 <body>
 
+  <!-- SKIP TO CONTENT -->
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
   <!-- MOBILE MENU -->
   <div class="overlay" id="overlay"></div>
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú de navegación">
     <a href="#services" class="mobile-link">Servicios</a>
     <a href="#process" class="mobile-link">Proceso</a>
     <a href="#portfolio" class="mobile-link">Portfolio</a>
@@ -434,7 +489,7 @@
   </div>
 
   <!-- NAV -->
-  <nav id="nav">
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
     <a href="#" class="nav-logo">
       <img src="assets/logo-symbol.png" alt="Confluex">
       <span>confluex</span>
@@ -451,15 +506,18 @@
       </button>
       <div class="nav-dot"></div>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__grid"></div>
+  <section class="hero" aria-label="Presentación">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
     <div class="hero__content">
       <img src="assets/logo-symbol.png" alt="" class="hero__symbol fade">
       <h1 class="fade">Creamos lo que<br>tu negocio <strong>necesita</strong></h1>
@@ -468,16 +526,16 @@
         Comenzar un proyecto <span class="arrow">&rarr;</span>
       </a>
     </div>
-    <div class="hero__scroll">
+    <div class="hero__scroll" aria-hidden="true">
       <div class="hero__scroll-line"></div>
       <span>scroll</span>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
+  <section class="services" id="services" aria-label="Servicios">
     <div class="services__header">
       <h2 class="fade">Lo que<br><span>hacemos</span></h2>
       <p class="fade">Soluciones digitales de punta a punta para negocios que quieren crecer.</p>
@@ -505,10 +563,10 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- PROCESS -->
-  <section class="process" id="process">
+  <section class="process" id="process" aria-label="Proceso de trabajo">
     <div class="process__inner">
       <div class="process__header fade">
         <div class="process__label">// cómo trabajamos</div>
@@ -539,10 +597,10 @@
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
+  <section class="portfolio" id="portfolio" aria-label="Portfolio">
     <div class="portfolio__inner">
       <div class="portfolio__header fade">
         <div class="portfolio__label">// nuestro trabajo</div>
@@ -550,61 +608,61 @@
       </div>
       <div class="portfolio__grid">
         <div class="p-card fade fade-delay-1">
-          <div class="p-card__thumb p-card__thumb--cafe">&#9749;</div>
+          <div class="p-card__thumb"><img src="assets/thumbs/cafe.png" alt="Origen & Altitud Café" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Cafetería</div>
             <div class="p-card__name">Origen & Altitud Café</div>
-            <a href="https://geisonhg.github.io/gersoTech/demos/demo-cafe/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+            <a href="demos/demo-cafe/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
         <div class="p-card fade fade-delay-2">
-          <div class="p-card__thumb p-card__thumb--restaurant">&#127869;</div>
+          <div class="p-card__thumb"><img src="assets/thumbs/restaurante.png" alt="Sabor de mi Tierra" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Restaurante</div>
             <div class="p-card__name">Sabor de mi Tierra</div>
-            <a href="https://geisonhg.github.io/gersoTech/demos/demo-fastfood/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+            <a href="demos/demo-fastfood/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
         <div class="p-card fade fade-delay-3">
-          <div class="p-card__thumb p-card__thumb--salon">&#9986;</div>
+          <div class="p-card__thumb"><img src="assets/thumbs/peluqueria.png" alt="Lumière Atelier" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Peluquería</div>
             <div class="p-card__name">Lumière Atelier</div>
-            <a href="https://geisonhg.github.io/gersoTech/demos/demo-peluqueria/" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
+            <a href="demos/demo-peluqueria/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
         <div class="p-card fade fade-delay-1">
-          <div class="p-card__thumb p-card__thumb--dental">&#129463;</div>
+          <div class="p-card__thumb"><img src="assets/thumbs/dental.png" alt="Sonría Dental" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Clínica Dental</div>
-            <div class="p-card__name">Clínica Dental</div>
-            <span class="p-card__link p-card__link--soon">Próximamente</span>
+            <div class="p-card__name">Sonría Dental</div>
+            <a href="demos/demo-clinicadental/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
         <div class="p-card fade fade-delay-2">
-          <div class="p-card__thumb p-card__thumb--gym">&#127947;</div>
+          <div class="p-card__thumb"><img src="assets/thumbs/gym.png" alt="Iron Pulse Fitness" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Fitness</div>
-            <div class="p-card__name">Gimnasio / Fitness</div>
-            <span class="p-card__link p-card__link--soon">Próximamente</span>
+            <div class="p-card__name">Iron Pulse Fitness</div>
+            <a href="demos/demo-GYM/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
         <div class="p-card fade fade-delay-3">
-          <div class="p-card__thumb p-card__thumb--vet">&#128054;</div>
+          <div class="p-card__thumb p-card__thumb--vet"><img src="assets/thumbs/vet.png" alt="Patitas Felices Veterinaria" loading="lazy"></div>
           <div class="p-card__body">
             <div class="p-card__tag">Veterinaria</div>
-            <div class="p-card__name">Veterinaria</div>
-            <span class="p-card__link p-card__link--soon">Próximamente</span>
+            <div class="p-card__name">Patitas Felices</div>
+            <a href="demos/demo-veterinaria/index.html" target="_blank" rel="noopener" class="p-card__link">Ver demo &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- FOUNDERS -->
-  <section class="founders" id="founders">
+  <section class="founders" id="founders" aria-label="Equipo fundador">
     <div class="founders__inner">
       <div class="founders__text fade">
         <h2><em>Dos culturas,</em><br>un código</h2>
@@ -619,19 +677,19 @@
       </div>
       <div class="founders__visual fade">
         <div class="founder-card">
-          <img src="assets/card-nicolas.png" alt="Nicolas Boggioni Troncoso — Co-Founder & Developer">
+          <img src="assets/card-nicolas.png" alt="Nicolas Boggioni Troncoso — Co-Founder & Developer" loading="lazy">
         </div>
         <div class="founder-card">
-          <img src="assets/card-geison.png" alt="Geison Herrera — Co-Founder & Designer">
+          <img src="assets/card-geison.png" alt="Geison Herrera — Co-Founder & Designer" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <div class="divider" aria-hidden="true"></div>
 
   <!-- CTA -->
-  <section class="cta" id="contact">
+  <section class="cta" id="contact" aria-label="Contacto">
     <div class="cta__content">
       <h2 class="fade">Tienes una idea?<br><strong>Hagámosla realidad.</strong></h2>
       <p class="fade">Cuéntanos sobre tu proyecto y te respondemos en 24 horas.</p>
@@ -640,11 +698,13 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer__inner">
       <div class="footer__brand">
-        <img src="assets/logo-symbol.png" alt="">
+        <img src="assets/logo-symbol.png" alt="Confluex logo" loading="lazy">
         <span>confluex</span>
       </div>
       <p>&copy; 2026 Confluex — Two cultures, one codebase</p>
@@ -695,10 +755,14 @@
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('mobileMenu');
     const overlay = document.getElementById('overlay');
-    function closeMenu() { menu.classList.remove('open'); overlay.classList.remove('open'); }
+    function closeMenu() {
+      menu.classList.remove('open'); overlay.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('open');
+      const isOpen = menu.classList.toggle('open');
       overlay.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
     overlay.addEventListener('click', closeMenu);
     document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeMenu));

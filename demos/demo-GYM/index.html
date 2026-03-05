@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Pulse Fitness | Demo Confluex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Portfolio Bar -->
+    <div class="portfolio-bar">
+        Este es un proyecto de demostración creado por <a href="../../index.html">Confluex</a>.
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <i class="fas fa-dumbbell"></i>
+            IRON PULSE
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#membresias">Membresías</a></li>
+            <li><a href="#clases">Clases</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#entrenadores">Entrenadores</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+        <button class="nav-cta">¡Empezar Ahora!</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-fire"></i>
+                #1 Gimnasio en Calama
+            </div>
+            <h1 class="hero-title">
+                TRANSFORMA TU
+                <span class="highlight">CUERPO</span>
+                DOMINA TU MENTE
+            </h1>
+            <p class="hero-subtitle">
+                En Iron Pulse Fitness no solo entrenas, te transformas. 
+                Descubre tu verdadero potencial con entrenamiento de élite y una comunidad que te impulsa.
+            </p>
+            <div class="hero-cta-group">
+                <button class="btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Comienza Tu Transformación
+                </button>
+                <button class="btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    Ver Instalaciones
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2500">0</div>
+                    <div class="stat-label">Miembros Activos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Entrenadores Elite</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="membership" id="membresias">
+        <div class="section-header reveal">
+            <span class="section-tag">Membresías</span>
+            <h2 class="section-title">ELIGE TU PLAN DE TRANSFORMACIÓN</h2>
+            <p class="section-subtitle">Planes diseñados para cada nivel. Sin contratos, sin excusas. Solo resultados.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card reveal stagger-1">
+                <div class="plan-name">BÁSICO</div>
+                <p class="plan-description">Perfecto para comenzar tu viaje fitness</p>
+                <div class="plan-price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">89</span>
+                    <span class="price-period">/mes</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Acceso a zona de peso libre</li>
+                    <li><i class="fas fa-check"></i> Máquinas de cardio</li>
+                    <li><i class="fas fa-check"></i> Vestuarios con lockers</li>
+                    <li><i class="fas fa-check"></i> App móvil de seguimiento</li>
+                    <li><i class="fas fa-times"></i> Clases grupales</li>
+                    <li><i class="fas fa-times"></i> Entrenador personal</li>
+                </ul>
+                <button class="btn-plan">Seleccionar Plan</button>
+            </div>
+            <div class="pricing-card featured reveal stagger-2">
+                <span class="featured-badge">RECOMENDADO</span>
+                <div class="plan-name">PRO</div>
+                <p class="plan-description">El plan más popular para resultados reales</p>
+                <div class="plan-price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">149</span>
+                    <span class="price-period">/mes</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Todo lo del plan Básico</li>
+                    <li><i class="fas fa-check"></i> Clases grupales ilimitadas</li>
+                    <li><i class="fas fa-check"></i> 2 sesiones con entrenador/mes</li>
+                    <li><i class="fas fa-check"></i> Acceso a sauna y spa</li>
+                    <li><i class="fas fa-check"></i> Nutricionista mensual</li>
+                    <li><i class="fas fa-times"></i> Entrenador dedicado</li>
+                </ul>
+                <button class="btn-plan">Seleccionar Plan</button>
+            </div>
+            <div class="pricing-card reveal stagger-3">
+                <div class="plan-name">ELITE</div>
+                <p class="plan-description">Experiencia fitness premium sin límites</p>
+                <div class="plan-price">
+                    <span class="price-currency">$</span>
+                    <span class="price-amount">249</span>
+                    <span class="price-period">/mes</span>
+                </div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Todo lo del plan Pro</li>
+                    <li><i class="fas fa-check"></i> Entrenador personal dedicado</li>
+                    <li><i class="fas fa-check"></i> Plan nutricional personalizado</li>
+                    <li><i class="fas fa-check"></i> Acceso 24/7 con huella</li>
+                    <li><i class="fas fa-check"></i> Zona VIP exclusiva</li>
+                    <li><i class="fas fa-check"></i> Invitados ilimitados</li>
+                </ul>
+                <button class="btn-plan">Seleccionar Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="classes" id="clases">
+        <div class="section-header reveal">
+            <span class="section-tag">Nuestras Clases</span>
+            <h2 class="section-title">DESCUBRE TU DISCIPLINA</h2>
+            <p class="section-subtitle">Desde alta intensidad hasta mindful movement. Tenemos la clase perfecta para ti.</p>
+        </div>
+        <div class="classes-grid">
+            <div class="class-card reveal stagger-1">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=800&fit=crop" alt="CrossFit" class="class-image">
+                <div class="class-overlay"></div>
+                <div class="class-content">
+                    <div class="class-icon">
+                        <i class="fas fa-fire-flame-curved"></i>
+                    </div>
+                    <h3 class="class-name">CROSSFIT</h3>
+                    <p class="class-description">Entrenamiento funcional de alta intensidad que combina levantamiento olímpico, gimnasia y cardio.</p>
+                    <div class="class-meta">
+                        <span><i class="fas fa-clock"></i> 60 min</span>
+                        <span><i class="fas fa-fire"></i> Alta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class-card reveal stagger-2">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=800&fit=crop" alt="Yoga" class="class-image">
+                <div class="class-overlay"></div>
+                <div class="class-content">
+                    <div class="class-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="class-name">YOGA POWER</h3>
+                    <p class="class-description">Conecta cuerpo y mente con nuestras clases de yoga dinámico que fortalecen y flexibilizan.</p>
+                    <div class="class-meta">
+                        <span><i class="fas fa-clock"></i> 75 min</span>
+                        <span><i class="fas fa-leaf"></i> Media</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class-card reveal stagger-3">
+                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&h=800&fit=crop" alt="Boxing" class="class-image">
+                <div class="class-overlay"></div>
+                <div class="class-content">
+                    <div class="class-icon">
+                        <i class="fas fa-hand-fist"></i>
+                    </div>
+                    <h3 class="class-name">BOXING FIT</h3>
+                    <p class="class-description">Entrena como un campeón. Mejora tu coordinación, resistencia y libera estrés con cada golpe.</p>
+                    <div class="class-meta">
+                        <span><i class="fas fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-fire"></i> Alta</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class-card reveal stagger-4">
+                <img src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=600&h=800&fit=crop" alt="HIIT" class="class-image">
+                <div class="class-overlay"></div>
+                <div class="class-content">
+                    <div class="class-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="class-name">HIIT BURN</h3>
+                    <p class="class-description">Intervalos de alta intensidad para quemar grasa y mejorar tu condición cardiovascular.</p>
+                    <div class="class-meta">
+                        <span><i class="fas fa-clock"></i> 30 min</span>
+                        <span><i class="fas fa-fire"></i> Extrema</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="horarios">
+        <div class="section-header reveal">
+            <span class="section-tag">Horarios</span>
+            <h2 class="section-title">PLANIFICA TU ENTRENAMIENTO</h2>
+            <p class="section-subtitle">Encuentra el horario perfecto para tus clases favoritas. ¡Nunca es tarde para empezar!</p>
+        </div>
+        <div class="schedule-container reveal">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>06:00</strong></td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">06:00 - 07:00</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">06:00 - 07:15</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">06:00 - 07:00</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">06:00 - 07:15</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">06:00 - 07:00</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>08:00</strong></td>
+                        <td>
+                            <div class="schedule-class" style="color: #00d4ff;">HIIT Burn</div>
+                            <div class="schedule-time">08:00 - 08:30</div>
+                            <div class="schedule-trainer">Diana R.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">08:00 - 08:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #00d4ff;">HIIT Burn</div>
+                            <div class="schedule-time">08:00 - 08:30</div>
+                            <div class="schedule-trainer">Diana R.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">08:00 - 08:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #00d4ff;">HIIT Burn</div>
+                            <div class="schedule-time">08:00 - 08:30</div>
+                            <div class="schedule-trainer">Diana R.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">08:00 - 09:00</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>10:00</strong></td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">10:00 - 11:15</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">10:00 - 11:00</div>
+                            <div class="schedule-trainer">Juan P.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">10:00 - 11:15</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">10:00 - 11:00</div>
+                            <div class="schedule-trainer">Juan P.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">10:00 - 11:15</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">10:00 - 10:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>18:00</strong></td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">18:00 - 18:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #00d4ff;">HIIT Burn</div>
+                            <div class="schedule-time">18:00 - 18:30</div>
+                            <div class="schedule-trainer">Diana R.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">18:00 - 18:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #00d4ff;">HIIT Burn</div>
+                            <div class="schedule-time">18:00 - 18:30</div>
+                            <div class="schedule-trainer">Diana R.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff6d00;">Boxing</div>
+                            <div class="schedule-time">18:00 - 18:45</div>
+                            <div class="schedule-trainer">Miguel T.</div>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>19:30</strong></td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">19:30 - 20:30</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">19:30 - 20:45</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">19:30 - 20:30</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #c8ff00;">Yoga</div>
+                            <div class="schedule-time">19:30 - 20:45</div>
+                            <div class="schedule-trainer">Ana L.</div>
+                        </td>
+                        <td>
+                            <div class="schedule-class" style="color: #ff3d00;">CrossFit</div>
+                            <div class="schedule-time">19:30 - 20:30</div>
+                            <div class="schedule-trainer">Carlos M.</div>
+                        </td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="schedule-legend reveal">
+            <div class="legend-item">
+                <div class="legend-dot crossfit"></div>
+                <span>CrossFit</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot yoga"></div>
+                <span>Yoga</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot boxing"></div>
+                <span>Boxing</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot hiit"></div>
+                <span>HIIT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers" id="entrenadores">
+        <div class="section-header reveal">
+            <span class="section-tag">Nuestro Equipo</span>
+            <h2 class="section-title">ENTRENADORES DE ÉLITE</h2>
+            <p class="section-subtitle">Profesionales certificados dedicados a transformar tu vida, un entrenamiento a la vez.</p>
+        </div>
+        <div class="trainers-grid">
+            <div class="trainer-card reveal stagger-1">
+                <div class="trainer-image-container">
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop" alt="Carlos Mendoza" class="trainer-image">
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">CARLOS MENDOZA</h3>
+                    <p class="trainer-specialty">CrossFit & Fuerza</p>
+                    <p class="trainer-bio">Campeón nacional de CrossFit con 10 años de experiencia en entrenamiento de alta intensidad.</p>
+                </div>
+            </div>
+            <div class="trainer-card reveal stagger-2">
+                <div class="trainer-image-container">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=500&fit=crop" alt="Ana López" class="trainer-image">
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">ANA LÓPEZ</h3>
+                    <p class="trainer-specialty">Yoga & Movilidad</p>
+                    <p class="trainer-bio">Instructora certificada en yoga terapéutico y meditación mindfulness.</p>
+                </div>
+            </div>
+            <div class="trainer-card reveal stagger-3">
+                <div class="trainer-image-container">
+                    <img src="https://images.unsplash.com/photo-1597347343908-2937e7dcc560?w=400&h=500&fit=crop" alt="Miguel Torres" class="trainer-image">
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">MIGUEL TORRES</h3>
+                    <p class="trainer-specialty">Boxing & Combat</p>
+                    <p class="trainer-bio">Ex-boxeador profesional especializado en entrenamiento de combate y condición física.</p>
+                </div>
+            </div>
+            <div class="trainer-card reveal stagger-4">
+                <div class="trainer-image-container">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop" alt="Diana Rodríguez" class="trainer-image">
+                    <div class="trainer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">DIANA RODRÍGUEZ</h3>
+                    <p class="trainer-specialty">HIIT & Cardio</p>
+                    <p class="trainer-bio">Especialista en quema de grasa y acondicionamiento cardiovascular de alto rendimiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="ubicacion">
+        <div class="section-header reveal">
+            <span class="section-tag">Ubicación</span>
+            <h2 class="section-title">ENCUÉNTRANOS</h2>
+            <p class="section-subtitle">Visítanos en el corazón de Calama. Tu transformación comienza aquí.</p>
+        </div>
+        <div class="location-container reveal">
+            <div class="location-info">
+                <div class="location-item">
+                    <div class="location-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="location-content">
+                        <h4>DIRECCIÓN</h4>
+                        <p>Av. Granaderos 2050<br>Calama, Antofagasta, Chile</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <div class="location-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="location-content">
+                        <h4>HORARIO DE ATENCIÓN</h4>
+                        <p>Lunes a Viernes: 5:00 AM - 10:00 PM<br>Sábados: 6:00 AM - 8:00 PM<br>Domingos: 8:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="location-item">
+                    <div class="location-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="location-content">
+                        <h4>CONTACTO</h4>
+                        <p>Teléfono: +56 55 234 5678<br>Email: info@ironpulse.fitness</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14636.5!2d-68.93!3d-22.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96a94efc4ef4e9cb%3A0x5be82a9bbb1e3a12!2sCalama%2C%20Antofagasta!5e0!3m2!1ses!2scl!4v1709000000000!5m2!1ses!2scl"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    IRON PULSE
+                </div>
+                <p>Transformando vidas a través del fitness desde 2010. Únete a la comunidad más fuerte de Calama y descubre tu verdadero potencial.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#membresias">Membresías</a></li>
+                    <li><a href="#clases">Clases</a></li>
+                    <li><a href="#horarios">Horarios</a></li>
+                    <li><a href="#entrenadores">Entrenadores</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Entrenamiento Personal</a></li>
+                    <li><a href="#">Clases Grupales</a></li>
+                    <li><a href="#">Nutrición Deportiva</a></li>
+                    <li><a href="#">Fisioterapia</a></li>
+                    <li><a href="#">Spa & Recuperación</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cancelación</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Iron Pulse Fitness — Diseño web por <a href="../../index.html">Confluex</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Create Particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter Animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-count'));
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += step;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current).toLocaleString();
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target.toLocaleString() + '+';
+                            }
+                        };
+                        updateCounter();
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            counterObserver.observe(heroStats);
+        }
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.background = 'rgba(10, 10, 10, 0.98)';
+            navLinks.style.padding = '20px';
+            navLinks.style.borderBottom = '1px solid var(--color-border)';
+        });
+
+        // Button Click Effects
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if (!this.closest('nav') && !this.classList.contains('mobile-menu-btn')) {
+                    const ripple = document.createElement('span');
+                    ripple.style.cssText = `
+                        position: absolute;
+                        background: rgba(255, 255, 255, 0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        pointer-events: none;
+                    `;
+                    this.style.position = 'relative';
+                    this.style.overflow = 'hidden';
+                    
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
+                    ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
+                    
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                }
+            });
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Parallax Effect on Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroGrid = document.querySelector('.hero-grid');
+            if (heroGrid && scrolled < window.innerHeight) {
+                heroGrid.style.transform = `perspective(500px) rotateX(60deg) translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Schedule Cell Click Effect
+        document.querySelectorAll('.schedule-table td').forEach(cell => {
+            cell.addEventListener('click', function() {
+                if (this.querySelector('.schedule-class')) {
+                    this.style.background = 'rgba(255, 61, 0, 0.2)';
+                    setTimeout(() => {
+                        this.style.background = '';
+                    }, 300);
+                }
+            });
+        });
+
+        // Pricing Card Selection
+        document.querySelectorAll('.btn-plan').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.pricing-card');
+                const planName = card.querySelector('.plan-name').textContent;
+                alert(`¡Has seleccionado el plan ${planName}! Un asesor se pondrá en contacto contigo pronto.`);
+            });
+        });
+
+        // CTA Buttons
+        document.querySelectorAll('.btn-primary, .nav-cta').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('membresias').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Secondary CTA
+        document.querySelectorAll('.btn-secondary').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('¡Próximamente! Video tour de nuestras instalaciones.');
+            });
+        });
+    </script>
+
+    <!-- CHATBOT WIDGET -->
+    <div id="gymChatbot">
+      <button id="gymChatBtn" aria-label="Abrir chat">💪</button>
+      <div id="gymChatWindow">
+        <div class="gym-header">
+          <span>🏋️ Iron Pulse Fitness</span>
+          <button id="gymChatClose" aria-label="Cerrar chat">&times;</button>
+        </div>
+        <div id="gymChatMessages"></div>
+        <div id="gymChatInput" class="gym-input-wrap" style="display:none;">
+          <input type="text" id="gymChatText" placeholder="Escribe aquí..." autocomplete="off">
+          <button id="gymChatSend">➤</button>
+        </div>
+        <div id="gymChatOptions"></div>
+      </div>
+    </div>
+
+    <style>
+      #gymChatbot { position: fixed; bottom: 24px; right: 24px; z-index: 9999; font-family: inherit; }
+      #gymChatBtn {
+        width: 62px; height: 62px; border-radius: 50%; border: none; cursor: pointer;
+        background: #FF4500; color: white; font-size: 1.7rem;
+        box-shadow: 0 4px 24px rgba(255,69,0,0.45); transition: transform 0.3s;
+      }
+      #gymChatBtn:hover { transform: scale(1.1); }
+      #gymChatBtn.hidden { display: none; }
+      #gymChatWindow {
+        display: none; flex-direction: column; width: 360px; height: 500px;
+        background: #1a1a1a; border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+        overflow: hidden; position: absolute; bottom: 0; right: 0;
+        border: 1px solid #333;
+      }
+      #gymChatWindow.open { display: flex; }
+      .gym-header {
+        background: linear-gradient(135deg, #FF4500, #cc3700); color: white; padding: 14px 18px;
+        display: flex; justify-content: space-between; align-items: center;
+        font-weight: 700; font-size: 0.95rem;
+      }
+      .gym-header button {
+        background: none; border: none; color: white; font-size: 1.4rem; cursor: pointer;
+      }
+      #gymChatMessages {
+        flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px;
+        background: #111;
+      }
+      #gymChatMessages::-webkit-scrollbar { width: 5px; }
+      #gymChatMessages::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+      .gym-msg {
+        max-width: 85%; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem;
+        line-height: 1.55; animation: gymFadeIn 0.3s ease; white-space: pre-line;
+      }
+      @keyframes gymFadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      .gym-msg.bot {
+        background: #2a2a2a; color: #e0e0e0; align-self: flex-start;
+        border-bottom-left-radius: 4px; border-left: 3px solid #FF4500;
+      }
+      .gym-msg.user {
+        background: #FF4500; color: white; align-self: flex-end;
+        border-bottom-right-radius: 4px;
+      }
+      .gym-msg.system {
+        background: #1b2e1b; color: #66cc66; align-self: center; text-align: center;
+        font-size: 0.82rem; border-radius: 10px; border-left: none;
+        border: 1px solid #2a5a2a;
+      }
+      #gymChatOptions {
+        padding: 12px; display: flex; flex-wrap: wrap; gap: 8px;
+        border-top: 1px solid #333; min-height: 52px; background: #1a1a1a;
+      }
+      .gym-opt {
+        padding: 8px 14px; border: 1px solid #FF4500; border-radius: 20px;
+        background: transparent; color: #FF4500; font-size: 0.82rem; font-weight: 600;
+        cursor: pointer; transition: all 0.2s; font-family: inherit;
+      }
+      .gym-opt:hover { background: #FF4500; color: white; }
+      .gym-input-wrap { padding: 10px 12px; border-top: 1px solid #333; display: flex; gap: 8px; background: #1a1a1a; }
+      .gym-input-wrap input {
+        flex: 1; padding: 8px 12px; border: 1px solid #444; border-radius: 20px;
+        font-size: 0.88rem; outline: none; background: #222; color: #e0e0e0;
+        font-family: inherit;
+      }
+      .gym-input-wrap input::placeholder { color: #777; }
+      .gym-input-wrap input:focus { border-color: #FF4500; }
+      .gym-input-wrap button {
+        background: #FF4500; color: white; border: none; border-radius: 50%;
+        width: 36px; height: 36px; cursor: pointer; font-size: 1rem; transition: background 0.2s;
+      }
+      .gym-input-wrap button:hover { background: #cc3700; }
+      .gym-dots { display: inline-flex; gap: 4px; padding: 4px 0; }
+      .gym-dots span { width: 7px; height: 7px; background: #FF4500; border-radius: 50%; animation: gymDot 1.2s infinite; opacity: 0.5; }
+      .gym-dots span:nth-child(2) { animation-delay: 0.2s; }
+      .gym-dots span:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes gymDot { 0%,80%,100% { opacity: 0.3; transform: scale(0.8); } 40% { opacity: 1; transform: scale(1.1); } }
+      .gym-time-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-top: 4px; }
+      .gym-slot {
+        padding: 6px 4px; border: 1px solid #FF4500; border-radius: 8px; background: transparent;
+        font-size: 0.78rem; cursor: pointer; transition: all 0.2s; text-align: center;
+        color: #FF4500; font-family: inherit;
+      }
+      .gym-slot:hover { background: #FF4500; color: white; }
+      .gym-slot.taken { border-color: #444; color: #555; text-decoration: line-through; cursor: not-allowed; pointer-events: none; }
+      @media (max-width: 420px) {
+        #gymChatWindow { width: calc(100vw - 32px); height: 70vh; right: -8px; }
+        .gym-time-grid { grid-template-columns: repeat(3,1fr); }
+      }
+    </style>
+
+    <script>
+    (function() {
+      function getSlots() {
+        var hours = ['6:00 AM','7:00 AM','8:00 AM','9:00 AM','5:00 PM','6:00 PM','7:00 PM','8:00 PM'];
+        var taken = new Set();
+        var seed = new Date().getDate();
+        hours.forEach(function(h, i) { if ((seed * (i + 3) * 13) % 10 < 3) taken.add(h); });
+        return hours.map(function(h) { return { time: h, available: !taken.has(h) }; });
+      }
+
+      var faq = {
+        welcome: {
+          msg: '¡Hola! 💪 Bienvenido a Iron Pulse Fitness. Soy tu asistente virtual. ¿En qué puedo ayudarte?',
+          options: [
+            { label: '📅 Agendar visita/clase de prueba', next: 'reserva_start' },
+            { label: '💳 Membresías y planes', next: 'membresias' },
+            { label: '🥊 Nuestras clases', next: 'clases' },
+            { label: '🕐 Horarios', next: 'horarios' },
+            { label: '📍 Ubicación', next: 'ubicacion' }
+          ]
+        },
+        membresias: {
+          msg: '💳 Planes de membresía:\n\n🔹 Básico — $29.990/mes\n   Acceso a zona de pesas y cardio\n\n🔸 Pro — $49.990/mes\n   Todo Básico + clases grupales ilimitadas + sauna\n\n🔶 Elite — $69.990/mes\n   Todo Pro + entrenador personal + acceso 24/7\n\n¡Sin contratos, cancela cuando quieras!',
+          options: [
+            { label: '📅 Agendar visita', next: 'reserva_start' },
+            { label: '🥊 Ver clases', next: 'clases' },
+            { label: '🔙 Inicio', next: 'welcome' }
+          ]
+        },
+        clases: {
+          msg: '🥊 Nuestras clases:\n\n🔥 CrossFit — 60 min · Alta intensidad\n🧘 Yoga Power — 75 min · Flexibilidad & fuerza\n🥊 Boxing Fit — 45 min · Combate & cardio\n⚡ HIIT Burn — 30 min · Quema extrema\n\nTodas incluidas en planes Pro y Elite.',
+          options: [
+            { label: '📅 Agendar clase de prueba', next: 'reserva_start' },
+            { label: '💳 Ver membresías', next: 'membresias' },
+            { label: '🕐 Horarios', next: 'horarios' },
+            { label: '🔙 Inicio', next: 'welcome' }
+          ]
+        },
+        horarios: {
+          msg: '🕐 Horarios de atención:\n\nLunes a Viernes: 5:00 AM – 10:00 PM\nSábados: 6:00 AM – 8:00 PM\nDomingos: 8:00 AM – 2:00 PM\n\n¡No hay excusas para no entrenar!',
+          options: [
+            { label: '📅 Agendar visita', next: 'reserva_start' },
+            { label: '🥊 Ver clases', next: 'clases' },
+            { label: '📍 Ubicación', next: 'ubicacion' },
+            { label: '🔙 Inicio', next: 'welcome' }
+          ]
+        },
+        ubicacion: {
+          msg: '📍 Nos encuentras en:\n\nAv. Granaderos 2050\nCalama, Antofagasta, Chile\n📞 +56 55 234 5678\n✉️ info@ironpulse.fitness',
+          options: [
+            { label: '🗺️ Abrir en Google Maps', action: function() { window.open('https://maps.app.goo.gl/obVR1mNGwCmLb7sj7', '_blank'); } },
+            { label: '📅 Agendar visita', next: 'reserva_start' },
+            { label: '🔙 Inicio', next: 'welcome' }
+          ]
+        }
+      };
+
+      var actividades = [
+        { label: '🔥 CrossFit', value: 'CrossFit' },
+        { label: '🧘 Yoga Power', value: 'Yoga' },
+        { label: '🥊 Boxing Fit', value: 'Boxing' },
+        { label: '⚡ HIIT Burn', value: 'HIIT' },
+        { label: '🏋️ Visita guiada', value: 'Visita guiada' }
+      ];
+
+      var reserva = { actividad: null, fecha: null, hora: null, nombre: null, telefono: null };
+      var currentStep = null;
+
+      var btn = document.getElementById('gymChatBtn');
+      var win = document.getElementById('gymChatWindow');
+      var cls = document.getElementById('gymChatClose');
+      var msgs = document.getElementById('gymChatMessages');
+      var opts = document.getElementById('gymChatOptions');
+      var inputWrap = document.getElementById('gymChatInput');
+      var inputField = document.getElementById('gymChatText');
+      var sendBtn = document.getElementById('gymChatSend');
+
+      btn.addEventListener('click', function() { btn.classList.add('hidden'); win.classList.add('open'); if (!msgs.children.length) showFaq('welcome'); });
+      cls.addEventListener('click', function() { win.classList.remove('open'); btn.classList.remove('hidden'); });
+
+      function addMsg(text, type) {
+        var d = document.createElement('div');
+        d.className = 'gym-msg ' + type; d.textContent = text;
+        msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+      }
+      function showTyping() {
+        var d = document.createElement('div');
+        d.className = 'gym-msg bot'; d.id = 'gymtyping';
+        d.innerHTML = '<div class="gym-dots"><span></span><span></span><span></span></div>';
+        msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+      }
+      function removeTyping() { var t = document.getElementById('gymtyping'); if (t) t.remove(); }
+      function botSay(text, type) {
+        type = type || 'bot';
+        return new Promise(function(r) { showTyping(); setTimeout(function() { removeTyping(); addMsg(text, type); r(); }, 500 + Math.random() * 400); });
+      }
+      function showInput(ph) {
+        opts.innerHTML = ''; opts.style.display = 'none';
+        inputWrap.style.display = 'flex'; inputField.placeholder = ph || ''; inputField.value = ''; inputField.focus();
+      }
+      function hideInput() { inputWrap.style.display = 'none'; opts.style.display = 'flex'; }
+
+      function showFaq(key) {
+        currentStep = null; hideInput();
+        var step = faq[key]; opts.innerHTML = '';
+        botSay(step.msg).then(function() {
+          step.options.forEach(function(o) {
+            var b = document.createElement('button');
+            b.className = 'gym-opt'; b.textContent = o.label;
+            b.addEventListener('click', function() {
+              addMsg(o.label, 'user');
+              if (o.action) { o.action(); if (o.next) setTimeout(function() { showFaq(o.next); }, 500); }
+              else if (o.next === 'reserva_start') setTimeout(function() { startReserva(); }, 400);
+              else setTimeout(function() { showFaq(o.next); }, 400);
+            });
+            opts.appendChild(b);
+          });
+        });
+      }
+
+      async function startReserva() {
+        currentStep = 'actividad';
+        reserva.actividad = reserva.fecha = reserva.hora = reserva.nombre = reserva.telefono = null;
+        opts.innerHTML = '';
+        await botSay('¡Vamos a agendarte! 💪');
+        await botSay('¿Qué actividad te interesa?');
+        opts.style.display = 'flex';
+        actividades.forEach(function(a) {
+          var b = document.createElement('button');
+          b.className = 'gym-opt'; b.textContent = a.label;
+          b.addEventListener('click', function() { handleInput(a.label, a); });
+          opts.appendChild(b);
+        });
+      }
+
+      async function handleInput(value, extra) {
+        addMsg(value, 'user'); opts.innerHTML = '';
+
+        if (currentStep === 'actividad') {
+          reserva.actividad = extra; currentStep = 'fecha';
+          await botSay('Genial, ' + extra.value + '. ¿Qué día prefieres?');
+          opts.style.display = 'flex';
+          var days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+          var months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+          var count = 0;
+          for (var i = 1; count < 5; i++) {
+            var d = new Date(); d.setDate(d.getDate() + i);
+            if (d.getDay() === 0) continue;
+            var label = count === 0 ? 'Mañana' : days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
+            var b = document.createElement('button');
+            b.className = 'gym-opt'; b.textContent = label;
+            (function(lbl) { b.addEventListener('click', function() { handleInput(lbl); }); })(label);
+            opts.appendChild(b); count++;
+          }
+        }
+        else if (currentStep === 'fecha') {
+          reserva.fecha = value; currentStep = 'hora';
+          await botSay('Horarios disponibles para ' + value + ':');
+          var slots = getSlots();
+          var grid = document.createElement('div');
+          grid.className = 'gym-time-grid';
+          slots.forEach(function(s) {
+            var t = document.createElement('button');
+            t.className = 'gym-slot' + (s.available ? '' : ' taken');
+            t.textContent = s.time;
+            if (s.available) t.addEventListener('click', function() { handleInput(s.time); });
+            grid.appendChild(t);
+          });
+          var wrapper = document.createElement('div');
+          wrapper.className = 'gym-msg bot'; wrapper.style.maxWidth = '95%';
+          wrapper.appendChild(grid);
+          msgs.appendChild(wrapper); msgs.scrollTop = msgs.scrollHeight;
+          opts.style.display = 'none';
+        }
+        else if (currentStep === 'hora') {
+          reserva.hora = value; currentStep = 'nombre';
+          await botSay(value + ' ✅\n\n¿Cuál es tu nombre?');
+          showInput('Tu nombre...');
+        }
+        else if (currentStep === 'nombre') {
+          reserva.nombre = value; currentStep = 'telefono';
+          await botSay('¡Perfecto, ' + value + '! 🔥\n\nDéjanos tu teléfono para confirmar:');
+          showInput('Tu teléfono...');
+        }
+        else if (currentStep === 'telefono') {
+          reserva.telefono = value; currentStep = null; hideInput();
+          await botSay('Confirmando tu reserva...');
+
+          var resumen = '✅ ¡Reserva confirmada!\n\n'
+            + '👤 ' + reserva.nombre + '\n'
+            + '🏋️ ' + reserva.actividad.value + '\n'
+            + '📅 ' + reserva.fecha + '\n'
+            + '🕐 ' + reserva.hora + '\n'
+            + '📞 ' + reserva.telefono + '\n\n'
+            + '📍 Av. Granaderos 2050, Calama\n\n'
+            + '¡Te esperamos en Iron Pulse Fitness! 💪🔥';
+
+          await botSay(resumen, 'system');
+          opts.innerHTML = ''; opts.style.display = 'flex';
+          [
+            { label: '💳 Ver membresías', next: 'membresias' },
+            { label: '🥊 Ver clases', next: 'clases' },
+            { label: '🔙 Inicio', next: 'welcome' }
+          ].forEach(function(o) {
+            var b = document.createElement('button');
+            b.className = 'gym-opt'; b.textContent = o.label;
+            b.addEventListener('click', function() { addMsg(o.label, 'user'); setTimeout(function() { showFaq(o.next); }, 400); });
+            opts.appendChild(b);
+          });
+        }
+      }
+
+      function submitText() {
+        var v = inputField.value.trim();
+        if (!v || !currentStep) return;
+        inputField.value = ''; handleInput(v);
+      }
+      sendBtn.addEventListener('click', submitText);
+      inputField.addEventListener('keydown', function(e) { if (e.key === 'Enter') submitText(); });
+    })();
+    </script>
+
+</body>
+</html>

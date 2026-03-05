@@ -1,0 +1,362 @@
+  /* --- Variables de Diseño (Lujo Moderno) --- */
+  :root {
+      --color-bg-dark: #121212;
+      /* Negro casi puro */
+      --color-bg-secondary: #1E1E1E;
+      /* Gris muy oscuro para secciones */
+      --color-gold: #D4AF37;
+      /* Dorado metálico clásico */
+      --color-text-light: #FAFAFA;
+      /* Blanco roto */
+      --color-text-muted: #B0B0B0;
+      /* Gris claro para descripciones */
+
+      --font-heading: 'Cinzel', serif;
+      --font-body: 'Montserrat', sans-serif;
+  }
+
+  /* --- Reset y Base --- */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+      line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3 {
+      font-family: var(--font-heading);
+      font-weight: 400;
+  }
+
+  a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+  }
+
+  /* --- Barra de Portafolio (Confluex) --- */
+  .portfolio-bar {
+      background-color: #000;
+      /* Negro total para contraste */
+      color: #aaa;
+      padding: 10px 5%;
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+  }
+
+  .portfolio-bar a {
+      color: var(--color-gold);
+  }
+
+  /* --- Navegación Transparente --- */
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      position: absolute;
+      /* Flota sobre el hero */
+      width: 100%;
+      z-index: 10;
+      background: linear-gradient(to bottom, rgba(18, 18, 18, 0.8), transparent);
+  }
+
+  .logo {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--color-gold);
+      letter-spacing: 2px;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+  }
+
+  .nav-links a {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .nav-links a:hover {
+      color: var(--color-gold);
+  }
+
+  .btn-gold {
+      padding: 12px 30px;
+      background-color: transparent;
+      color: var(--color-gold);
+      border: 1px solid var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.4s ease;
+  }
+
+  .btn-gold:hover {
+      background-color: var(--color-gold);
+      color: var(--color-bg-dark);
+  }
+
+  .btn-gold-filled {
+      background-color: var(--color-gold);
+      color: var(--color-bg-dark);
+  }
+
+  .btn-gold-filled:hover {
+      background-color: #E5C56A;
+      transform: translateY(-3px);
+  }
+
+  /* --- Hero Section (Glamour) --- */
+  .hero {
+      height: 100vh;
+      /* Imagen de fondo de alta calidad con overlay oscuro */
+      background: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.7)), url('https://images.unsplash.com/photo-1560869713-da86a9ec15c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 5%;
+  }
+
+  .hero-content {
+      max-width: 600px;
+  }
+
+  .hero-subtitle {
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      display: block;
+      font-weight: 600;
+  }
+
+  .hero h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+  }
+
+  .hero p {
+      color: var(--color-text-muted);
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+  }
+
+  /* --- Sección de Servicios (Lista de Precios Elegante) --- */
+  .services-section {
+      padding: 6rem 5%;
+      background-color: var(--color-bg-secondary);
+      text-align: center;
+  }
+
+  .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-gold);
+  }
+
+  .section-desc {
+      color: var(--color-text-muted);
+      margin-bottom: 4rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .price-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+  }
+
+  .price-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px dotted #333;
+      padding-bottom: 5px;
+  }
+
+  .price-item h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+  }
+
+  .price-amount {
+      font-family: var(--font-heading);
+      color: var(--color-gold);
+      font-size: 1.3rem;
+      font-weight: 700;
+  }
+
+  /* --- Galería (El "Proof" Visual) --- */
+  .gallery-section {
+      padding: 6rem 5%;
+  }
+
+  .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+  }
+
+  .gallery-item {
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: grayscale(30%);
+  }
+
+  .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+  }
+
+  /* --- Responsive Móvil --- */
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+      }
+
+      /* Menú simplificado para demo */
+      .hero h1 {
+          font-size: 3rem;
+      }
+
+      .price-list {
+          grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+          grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+          height: 300px;
+      }
+  }
+
+  /* MAP + CONTACT + FOOTER */
+  .map-contact-section {
+      margin-top: 5rem;
+      background: #111;
+      color: #fff;
+      padding: 60px 5%;
+  }
+
+  .map-contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .contact-title {
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      font-size: 2rem;
+      margin: 0;
+  }
+
+  .contact-desc {
+      margin-top: 20px;
+      opacity: .85;
+      line-height: 1.6;
+  }
+
+  .contact-details {
+      margin-top: 30px;
+      line-height: 2;
+      opacity: .9;
+  }
+
+  .contact-details i {
+      margin-right: 10px;
+      color: #d4af37;
+  }
+
+  .btn-directions {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: transform .15s ease, opacity .15s ease;
+  }
+
+  .btn-directions:hover {
+      transform: translateY(-2px);
+      opacity: .95;
+  }
+
+  .map-embed {
+      width: 100%;
+      height: 350px;
+  }
+
+  .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 12px;
+  }
+
+  /* FOOTER */
+  .site-footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: .9rem;
+  }
+
+  .site-footer span {
+      color: #d4af37;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+      .map-contact-container {
+          grid-template-columns: 1fr;
+      }
+
+      .map-embed {
+          height: 320px;
+      }
+  }
