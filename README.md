@@ -46,8 +46,8 @@ Hotel en Cartagena de Indias con:
 
 ## Caracteristicas Comunes
 
-- Portfolio bar fijo con link a Confluex
-- Navbar con glassmorphism y scroll detection
+- Portfolio bar estatico en la parte superior (se va al scrollear, no sigue al usuario)
+- Navbar fixed con glassmorphism y scroll detection (toma el top al scrollear)
 - Animaciones de scroll con IntersectionObserver
 - Chatbot integrado con flujos de FAQ
 - Responsive (mobile-first en demos nuevas)
