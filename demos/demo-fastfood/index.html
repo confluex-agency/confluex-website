@@ -21,7 +21,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <button type="button" class="mobile-menu-close" id="mobileClose" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
         <a href="#inicio" class="mobile-link">Inicio</a>
         <a href="#menu" class="mobile-link">Menu</a>
         <a href="#domicilios" class="mobile-link">Domicilios</a>
@@ -42,7 +42,7 @@
                 <li><a href="#ubicacion">Encuentranos</a></li>
             </ul>
             <a href="https://wa.me/573245620084?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="nav-cta"><i class="fab fa-whatsapp"></i> Pedir Domicilio</a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+            <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
@@ -371,16 +371,16 @@
 
     <!-- CHATBOT WIDGET -->
     <div id="chatbot">
-        <button id="chatBtn" aria-label="Abrir chat">&#128172;</button>
+        <button type="button" id="chatBtn" aria-label="Abrir chat">&#128172;</button>
         <div id="chatWindow">
             <div class="chat-header">
                 <span>&#127869; Sabor de mi Tierra</span>
-                <button id="chatClose" aria-label="Cerrar chat">&times;</button>
+                <button type="button" id="chatClose" aria-label="Cerrar chat">&times;</button>
             </div>
             <div id="chatMessages"></div>
             <div id="chatInput" class="chat-input-wrap" style="display:none;">
                 <input type="text" id="chatText" placeholder="Escribe aqui..." autocomplete="off">
-                <button id="chatSend">&#10148;</button>
+                <button type="button" id="chatSend">&#10148;</button>
             </div>
             <div id="chatOptions"></div>
         </div>

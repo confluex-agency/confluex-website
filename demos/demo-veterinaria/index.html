@@ -42,7 +42,7 @@
                 <li><a href="#ubicacion">Ubicación</a></li>
             </ul>
             <a href="#contacto" class="nav-cta"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+            <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Menú">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -264,6 +264,7 @@
                 <div class="location-map animate delay-2">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14636.5!2d-68.93!3d-22.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96a94efc4ef4e9cb%3A0x5be82a9bbb1e3a12!2sCalama%2C%20Antofagasta!5e0!3m2!1ses!2scl!4v1709000000000!5m2!1ses!2scl"
+                        title="Mapa de ubicación de Patitas Felices"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -327,16 +328,16 @@
 
     <!-- CHATBOT -->
     <div id="vet-chatbot">
-        <button id="vet-chatBtn" aria-label="Abrir chat">🐾</button>
+        <button type="button" id="vet-chatBtn" aria-label="Abrir chat">🐾</button>
         <div id="vet-chatWindow">
             <div class="vet-header">
                 <span>🐾 Patitas Felices</span>
-                <button id="vet-chatClose" aria-label="Cerrar chat">&times;</button>
+                <button type="button" id="vet-chatClose" aria-label="Cerrar chat">&times;</button>
             </div>
             <div id="vet-msgs"></div>
             <div id="vet-input" class="vet-input-wrap" style="display:none;">
                 <input type="text" id="vet-text" placeholder="Escribe aquí..." autocomplete="off">
-                <button id="vet-send">➤</button>
+                <button type="button" id="vet-send">➤</button>
             </div>
             <div id="vet-opts"></div>
         </div>
