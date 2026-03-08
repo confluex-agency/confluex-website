@@ -27,15 +27,15 @@
       <li><a href="#newsletter">Club NOVA</a></li>
     </ul>
     <div class="nav-right">
-      <button class="nav-icon" id="wishBtn" aria-label="Wishlist">
+      <button type="button" class="nav-icon" id="wishBtn" aria-label="Wishlist">
         <i class="far fa-heart"></i>
         <span class="nav-badge" id="wishBadge"></span>
       </button>
-      <button class="nav-icon" id="cartBtn" aria-label="Carrito">
+      <button type="button" class="nav-icon" id="cartBtn" aria-label="Carrito">
         <i class="fas fa-shopping-bag"></i>
         <span class="nav-badge" id="cartBadge"></span>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
+      <button type="button" class="hamburger" id="hamburger" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -47,7 +47,7 @@
   <div class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
       <h3>Carrito <span id="cartCount"></span></h3>
-      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">&times;</button>
+      <button type="button" class="cart-close" id="cartClose" aria-label="Cerrar carrito">&times;</button>
     </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer" id="cartFooter" style="display:none;">
@@ -56,8 +56,8 @@
         <strong id="cartTotal">$0</strong>
       </div>
       <div class="cart-shipping">Envío gratis en compras sobre $150.000</div>
-      <button class="btn-checkout" id="checkoutBtn"><i class="fas fa-lock"></i> Finalizar Compra</button>
-      <button class="btn-checkout-wa" id="checkoutWa"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</button>
+      <button type="button" class="btn-checkout" id="checkoutBtn"><i class="fas fa-lock"></i> Finalizar Compra</button>
+      <button type="button" class="btn-checkout-wa" id="checkoutWa"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</button>
     </div>
   </div>
 
@@ -65,7 +65,7 @@
   <div class="wish-drawer" id="wishDrawer">
     <div class="cart-header">
       <h3>Wishlist <span id="wishCount"></span></h3>
-      <button class="cart-close" id="wishClose" aria-label="Cerrar wishlist">&times;</button>
+      <button type="button" class="cart-close" id="wishClose" aria-label="Cerrar wishlist">&times;</button>
     </div>
     <div class="wish-items" id="wishItems"></div>
   </div>
@@ -96,11 +96,11 @@
     <h2 class="section-title reveal stagger-1">Catálogo</h2>
     <p class="section-subtitle reveal stagger-2">Filtra por categoría y agrega al carrito o a tu wishlist.</p>
     <div class="filter-tabs reveal stagger-3" id="filterTabs">
-      <button class="filter-tab active" data-cat="all">Todo</button>
-      <button class="filter-tab" data-cat="vestidos">Vestidos</button>
-      <button class="filter-tab" data-cat="outerwear">Outerwear</button>
-      <button class="filter-tab" data-cat="accesorios">Accesorios</button>
-      <button class="filter-tab" data-cat="calzado">Calzado</button>
+      <button type="button" class="filter-tab active" data-cat="all">Todo</button>
+      <button type="button" class="filter-tab" data-cat="vestidos">Vestidos</button>
+      <button type="button" class="filter-tab" data-cat="outerwear">Outerwear</button>
+      <button type="button" class="filter-tab" data-cat="accesorios">Accesorios</button>
+      <button type="button" class="filter-tab" data-cat="calzado">Calzado</button>
     </div>
     <div class="products-grid" id="productsGrid"></div>
   </section>
@@ -213,16 +213,16 @@
 
   <!-- Chatbot -->
   <div id="chatbot">
-    <button id="chatBtnOpen" aria-label="Abrir chat"><i class="far fa-comment-dots"></i></button>
+    <button type="button" id="chatBtnOpen" aria-label="Abrir chat"><i class="far fa-comment-dots"></i></button>
     <div id="chatWindow">
       <div class="chat-header">
         <span>NOVA Asistente</span>
-        <button id="chatCloseBtn" aria-label="Cerrar chat">&times;</button>
+        <button type="button" id="chatCloseBtn" aria-label="Cerrar chat">&times;</button>
       </div>
       <div id="chatMessages"></div>
       <div id="chatInput" class="chat-input-wrap" style="display:none;">
         <input type="text" id="chatText" placeholder="Escribe aquí..." autocomplete="off">
-        <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+        <button type="button" id="chatSend"><i class="fas fa-paper-plane"></i></button>
       </div>
       <div id="chatOptions"></div>
     </div>
