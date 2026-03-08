@@ -103,7 +103,14 @@ jobs:
                 "staticDistDir": ".",
                 "url": [
                   "/index.html",
-                  "/demos/demo-cafe/index.html"
+                  "/demos/demo-cafe/index.html",
+                  "/demos/demo-fastfood/index.html",
+                  "/demos/demo-peluqueria/index.html",
+                  "/demos/demo-clinicadental/index.html",
+                  "/demos/demo-GYM/index.html",
+                  "/demos/demo-veterinaria/index.html",
+                  "/demos/demo-ecommerce/index.html",
+                  "/demos/demo-hotel/index.html"
                 ]
               },
               "assert": {
