@@ -371,18 +371,18 @@
 
     <!-- CHATBOT WIDGET -->
     <div id="chatbot">
-        <button type="button" id="chatBtn" aria-label="Abrir chat">&#128172;</button>
-        <div id="chatWindow">
+        <button type="button" id="chat-btn" aria-label="Abrir chat">&#128172;</button>
+        <div id="chat-window">
             <div class="chat-header">
                 <span>&#127869; Sabor de mi Tierra</span>
                 <button type="button" id="chatClose" aria-label="Cerrar chat">&times;</button>
             </div>
-            <div id="chatMessages"></div>
+            <div id="chat-messages"></div>
             <div id="chatInput" class="chat-input-wrap" style="display:none;">
                 <input type="text" id="chatText" placeholder="Escribe aqui..." autocomplete="off">
                 <button type="button" id="chatSend">&#10148;</button>
             </div>
-            <div id="chatOptions"></div>
+            <div id="chat-options"></div>
         </div>
     </div>
 
@@ -410,9 +410,9 @@
         };
         var reserva = { personas: null, fecha: null, hora: null, nombre: null, telefono: null };
         var currentStep = null;
-        var btn = document.getElementById('chatBtn'), win = document.getElementById('chatWindow'),
-            close = document.getElementById('chatClose'), msgs = document.getElementById('chatMessages'),
-            opts = document.getElementById('chatOptions'), inputWrap = document.getElementById('chatInput'),
+        var btn = document.getElementById('chat-btn'), win = document.getElementById('chat-window'),
+            close = document.getElementById('chatClose'), msgs = document.getElementById('chat-messages'),
+            opts = document.getElementById('chat-options'), inputWrap = document.getElementById('chatInput'),
             inputField = document.getElementById('chatText'), sendBtn = document.getElementById('chatSend');
 
         btn.addEventListener('click', function(){ btn.classList.add('hidden'); win.classList.add('open'); if(!msgs.children.length) showFaq('welcome'); });

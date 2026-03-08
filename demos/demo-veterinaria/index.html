@@ -328,8 +328,8 @@
 
     <!-- CHATBOT -->
     <div id="vet-chatbot">
-        <button type="button" id="vet-chatBtn" aria-label="Abrir chat">🐾</button>
-        <div id="vet-chatWindow">
+        <button type="button" id="vet-chat-btn" aria-label="Abrir chat">🐾</button>
+        <div id="vet-chat-window">
             <div class="vet-header">
                 <span>🐾 Patitas Felices</span>
                 <button type="button" id="vet-chatClose" aria-label="Cerrar chat">&times;</button>
@@ -433,8 +433,8 @@
         const cita = { servicio: null, mascota: null, fecha: null, hora: null, nombre: null, telefono: null };
         let step = null;
 
-        const btn = document.getElementById('vet-chatBtn');
-        const win = document.getElementById('vet-chatWindow');
+        const btn = document.getElementById('vet-chat-btn');
+        const win = document.getElementById('vet-chat-window');
         const cls = document.getElementById('vet-chatClose');
         const msgs = document.getElementById('vet-msgs');
         const opts = document.getElementById('vet-opts');
@@ -452,11 +452,11 @@
         }
         function showTyping() {
             const d = document.createElement('div');
-            d.className = 'vet-msg bot'; d.id = 'vetTyping';
+            d.className = 'vet-msg bot'; d.id = 'vet-typing';
             d.innerHTML = '<div class="vet-dots"><span></span><span></span><span></span></div>';
             msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
         }
-        function removeTyping() { const t = document.getElementById('vetTyping'); if (t) t.remove(); }
+        function removeTyping() { const t = document.getElementById('vet-typing'); if (t) t.remove(); }
         function botSay(t, type) {
             type = type || 'bot';
             return new Promise(r => { showTyping(); setTimeout(() => { removeTyping(); addMsg(t, type); r(); }, 500 + Math.random() * 400); });

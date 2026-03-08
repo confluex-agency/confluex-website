@@ -298,18 +298,18 @@
 
   <!-- Chatbot Widget -->
   <div id="chatbot">
-    <button type="button" id="chatBtn" aria-label="Abrir chat"><i class="far fa-comment-dots"></i></button>
-    <div id="chatWindow">
+    <button type="button" id="chat-btn" aria-label="Abrir chat"><i class="far fa-comment-dots"></i></button>
+    <div id="chat-window">
       <div class="chat-header">
         <span>Bahía Serena</span>
         <button type="button" id="chatClose" aria-label="Cerrar chat">&times;</button>
       </div>
-      <div id="chatMessages"></div>
+      <div id="chat-messages"></div>
       <div id="chatInput" class="chat-input-wrap" style="display:none;">
         <input type="text" id="chatText" placeholder="Escribe aquí..." autocomplete="off">
         <button type="button" id="chatSend"><i class="fas fa-paper-plane"></i></button>
       </div>
-      <div id="chatOptions"></div>
+      <div id="chat-options"></div>
     </div>
   </div>
 
@@ -419,11 +419,11 @@
     const reserva = { room: null, checkin: null, checkout: null, guests: null, nombre: null, telefono: null };
     let currentStep = null;
 
-    const btn = document.getElementById('chatBtn');
-    const win = document.getElementById('chatWindow');
+    const btn = document.getElementById('chat-btn');
+    const win = document.getElementById('chat-window');
     const closeBtn = document.getElementById('chatClose');
-    const msgs = document.getElementById('chatMessages');
-    const opts = document.getElementById('chatOptions');
+    const msgs = document.getElementById('chat-messages');
+    const opts = document.getElementById('chat-options');
     const inputWrap = document.getElementById('chatInput');
     const inputField = document.getElementById('chatText');
     const sendBtn = document.getElementById('chatSend');
