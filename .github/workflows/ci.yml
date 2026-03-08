@@ -80,6 +80,7 @@ jobs:
             --exclude "^tel:"
             --exclude "wa.me"
             --exclude "api.whatsapp.com"
+            --exclude "confluex-agency.github.io"
             "**/*.html"
           fail: true
 
