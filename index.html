@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Confluex — Dos culturas, un código">
   <meta property="og:description" content="Diseño web, automatización y chatbots con IA. Soluciones digitales desde Dublín para el mundo.">
-  <meta property="og:image" content="assets/social-avatar.png">
-  <meta property="og:url" content="https://confluex-agency.github.io/confluex-website/">
+  <meta property="og:image" content="https://confluex.dev/assets/social-avatar.png">
+  <meta property="og:url" content="https://confluex.dev/">
   <meta property="og:site_name" content="Confluex">
 
   <!-- Twitter Card -->
@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="assets/social-avatar.png">
 
   <!-- SEO -->
-  <link rel="canonical" href="https://confluex-agency.github.io/confluex-website/">
+  <link rel="canonical" href="https://confluex.dev/">
   <meta name="robots" content="index, follow">
 
   <!-- Favicon -->
@@ -47,7 +47,7 @@
     "@type": "Organization",
     "name": "Confluex",
     "description": "Soluciones digitales de diseño web, automatización de procesos y chatbots con IA. Dos culturas, un código.",
-    "url": "https://confluex-agency.github.io/confluex-website/"
+    "url": "https://confluex.dev/"
   }
   </script>
 
@@ -294,9 +294,47 @@
     <div class="cta__content">
       <h2 class="fade">¿Tienes una idea?<br><strong>Hagámosla realidad.</strong></h2>
       <p class="fade">Cuéntanos sobre tu proyecto y te respondemos en 24 horas.</p>
-      <a href="mailto:hello@confluex.dev" class="cta__btn fade">Hablemos</a>
-      <a href="https://wa.me/353899766000?text=Hola%20Confluex!%20Me%20interesa%20saber%20más%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="cta__wa fade">WhatsApp &rarr;</a>
-      <a href="mailto:hello@confluex.dev" class="cta__email fade">hello@confluex.dev</a>
+
+      <form class="contact-form fade" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="1f9df2a5-a290-433c-8db9-6fd4a18313c4">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde confluex.dev">
+        <input type="hidden" name="from_name" value="Confluex Website">
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">¿Qué necesitas?</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Diseño & Desarrollo Web">Diseño & Desarrollo Web</option>
+            <option value="Automatización & Chatbots">Automatización & Chatbots</option>
+            <option value="Integraciones & APIs">Integraciones & APIs</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Cuéntanos sobre tu proyecto</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe brevemente tu idea o lo que necesitas..." required></textarea>
+        </div>
+        <button type="submit" class="cta__btn">Enviar mensaje <span class="arrow">&rarr;</span></button>
+      </form>
+
+      <div class="cta__alt fade">
+        <span>O escríbenos directo:</span>
+        <div class="cta__links">
+          <a href="https://wa.me/353896171907?text=Hola%20Confluex!%20Me%20interesa%20saber%20más%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="cta__wa">WhatsApp &rarr;</a>
+          <a href="mailto:hello@confluex.dev" class="cta__email">hello@confluex.dev</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -312,7 +350,7 @@
       <p>&copy; 2026 Confluex — Two cultures, one codebase</p>
       <div class="footer__links">
         <a href="mailto:hello@confluex.dev">Email</a>
-        <a href="https://wa.me/353899766000" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/353896171907" target="_blank" rel="noopener">WhatsApp</a>
         <a href="https://github.com/confluex-agency" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
