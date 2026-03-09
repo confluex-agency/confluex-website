@@ -81,6 +81,7 @@ jobs:
             --exclude "wa.me"
             --exclude "api.whatsapp.com"
             --exclude "confluex-agency.github.io"
+            --exclude "api.web3forms.com"
             "**/*.html"
           fail: true
 
