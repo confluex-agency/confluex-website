@@ -143,6 +143,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check no .env files committed
+        run: |
+          echo "=== Checking for .env files in repo ==="
+          if find . -type f \( -name ".env" -o -name ".env.*" \) -not -name ".env.example" -not -path "./.git/*" -not -path "./node_modules/*" | grep -q .; then
+            find . -type f \( -name ".env" -o -name ".env.*" \) -not -name ".env.example" -not -path "./.git/*" -not -path "./node_modules/*"
+            echo "::error::Detected .env file(s) in repo. Move secrets to GitHub Secrets and add .env to .gitignore."
+            exit 1
+          fi
+          echo "No .env files detected ✓"
+
       - name: Check for exposed secrets
         run: |
           echo "=== Checking for potential API keys ==="
@@ -151,6 +161,15 @@ jobs:
             exit 1
           fi
           echo "No exposed secrets found."
+
+      - name: Check for eval / new Function
+        run: |
+          echo "=== Checking for eval() / new Function() (RCE risk) ==="
+          if grep -rnE '\beval\s*\(|new\s+Function\s*\(' --include="*.html" --include="*.js" .; then
+            echo "::error::Use of eval() or new Function() detected — RCE risk."
+            exit 1
+          fi
+          echo "No eval / new Function usage ✓"
 
       - name: Check images have alt attributes
         run: |
